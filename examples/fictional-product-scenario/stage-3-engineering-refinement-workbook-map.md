@@ -15,26 +15,20 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 ## 2. Product Boundary Tab
 
-| Field | Structured Value | Source |
-|---|---|---|
-| Product Intent | Help dispatchers make better-supported assignment decisions through complete intake, visible eligibility evidence, required human approval, accountable exceptions, and safe status. | Approved Product Recommendation |
-| First Priority | Guided request intake and accountable exception handling. | Approved Product Recommendation |
-| Conditional MVP | Human-approved recommendations for selected standard categories after data, eligibility, audit, and fallback gates pass. | Approved Product Recommendation |
-| Human Control | A dispatcher remains accountable for standard assignments; protected work requires supervisor approval. | Approved Product Recommendation |
-| System of Record | The existing scheduling application remains authoritative for assignments. | Approved Product Recommendation |
-| Explicit Exclusions | Autonomous assignment, location optimization, workforce scoring, broad analytics, configurable rule administration, and unsupported commitments. | Approved Product Recommendation |
-| Product Assumptions | Selected categories can use stable intake rules; the recommendation workflow may reduce fragmented decision work. | Engineering Refinement Package |
-| Engineering Assumptions | Current availability can be read; certification freshness can be improved or safely gated; scheduling confirmation can be represented distinctly. | Engineering Refinement Package |
-| Commitment Boundary | Discovery and refinement are authorized only after the relevant human decision. Duration, capacity, estimates, budget, and delivery timing are uncommitted. | Approval Record |
+| Product Intent | MVP Scope | Out of Scope | Product Assumption | Engineering Assumption | Source Artifact |
+|---|---|---|---|---|---|
+| Help dispatchers make better-supported assignment decisions through complete intake, visible eligibility evidence, required human approval, accountable exceptions, and safe status. | Guided category-specific intake; required-field and completeness validation; human-approved technician recommendations for selected standard categories after discovery gates pass; visible evidence and freshness warnings; dispatcher approval for standard assignments; supervisor approval for protected work; accountable exception reasons and a named manual queue; audit events; customer-safe request status; the scheduling application remains the assignment system of record. | Autonomous or silent assignment; removal of dispatcher accountability; recommendations based on unverified location; travel optimization; workforce scoring; automated approval of protected work; configurable rule administration; full dispatch analytics; broader service-category expansion; unapproved dates, budgets, capacity, or production outcomes. | Selected standard categories can use stable intake rules; improving completeness may reduce preventable clarification; a governed recommendation workspace may reduce fragmented decision work without transferring accountability. | Current availability can be read; certification freshness can be improved or safely gated; approved roles can be enforced; scheduling acceptance and failure can be represented distinctly; one accountable queue can own unresolved work. | [`Approved Product Recommendation`](stage-2-product-recommendation.md); [`Canonical Engineering Refinement Package`](stage-3-engineering-refinement-summary.md); [`Human Approval Record`](approval-record.md) |
+
+**Commitment boundary:** Discovery and refinement proceed only after the relevant human decision. Duration, capacity, estimates, budget, delivery timing, and implementation remain uncommitted.
 
 ## 3. Epics Tab
 
-| Epic ID | Epic Name | Business Goal | Business Value | Refinement Status | Key Dependencies | Primary Risks |
-|---|---|---|---|---|---|---|
-| EPIC-001 | Eligibility, Data, and Workflow Discovery | Determine whether governed recommendations can be safe, current, explainable, and usable. | Resolves the largest feasibility and governance unknowns before build commitment. | Ready for Discovery | Operations, Safety, technician data, scheduling interfaces, audit requirements | Stale evidence, ambiguous eligibility, duplicated dispatcher effort |
-| EPIC-002 | Guided Request Intake and Completeness | Reduce preventable clarification before dispatch. | Addresses the strongest fictional evidence and improves manual and supported dispatch. | Ready for Review; category details require discovery | Approved categories, portal capability, field ownership | Burdensome intake, overgeneralized rules, stale reused data |
-| EPIC-003 | Governed Dispatcher Recommendation Workspace | Consolidate assignment evidence without transferring accountability to AI. | May reduce decision friction while preserving human and safety controls. | Candidate MVP; gated by discovery | EPIC-001, role model, scheduling integration, audit events | Automation bias, stale certification, unclear rationale, false assignment state |
-| EPIC-004 | Exceptions, Status, and Operational Recovery | Keep every unresolved request visible, owned, and understandable. | Creates the control layer for safe recommendation support and reduces status chasing. | Ready for Review; integration discovery required | Queue ownership, status taxonomy, portal behavior, audit events | Orphaned work, duplicate queues, exposed internal details |
+| Epic ID | Epic Name | Business Goal | Business Value | Dependencies | Risks | Open Questions | Refinement Status |
+|---|---|---|---|---|---|---|---|
+| EPIC-001 | Eligibility, Data, and Workflow Discovery | Determine whether governed recommendations can be safe, current, explainable, and usable. | Resolves the largest feasibility and governance unknowns before build commitment. | DEP-001, DEP-002, DEP-004, DEP-008 | RISK-001, RISK-002, RISK-003, RISK-008 | OQ-001, OQ-002, OQ-003, OQ-009 | In Progress |
+| EPIC-002 | Guided Request Intake and Completeness | Reduce preventable clarification before dispatch. | Addresses the strongest fictional evidence and improves manual and supported dispatch. | DEP-001, DEP-003, DEP-008 | RISK-006 | OQ-004, OQ-009 | Ready for Review |
+| EPIC-003 | Governed Dispatcher Recommendation Workspace | Consolidate assignment evidence without transferring accountability to AI. | May reduce decision friction while preserving human and safety controls. | DEP-001, DEP-002, DEP-004, DEP-005, DEP-008 | RISK-001, RISK-002, RISK-003, RISK-004, RISK-009 | OQ-001, OQ-002, OQ-003, OQ-005, OQ-006, OQ-009 | Blocked |
+| EPIC-004 | Exceptions, Status, and Operational Recovery | Keep every unresolved request visible, owned, and understandable. | Creates the control layer for safe recommendation support and reduces status chasing. | DEP-004, DEP-006, DEP-007, DEP-008 | RISK-004, RISK-005, RISK-007 | OQ-006, OQ-007, OQ-008, OQ-009 | Ready for Review |
 
 ## 4. Stories Tab
 

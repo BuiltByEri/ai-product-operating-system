@@ -104,7 +104,7 @@ If the discovery gates pass, the conditional MVP will:
 
 **Business value:** resolves the largest feasibility and governance uncertainties before build commitment.
 
-**Refinement status:** Ready for Discovery.
+**Refinement status:** In Progress.
 
 **Key dependencies:** Operations, Safety, technician data, scheduling interfaces, portal capabilities, and audit requirements.
 
@@ -125,7 +125,7 @@ If the discovery gates pass, the conditional MVP will:
 
 **Business value:** addresses the strongest fictional evidence and improves both manual and recommendation-supported dispatch.
 
-**Refinement status:** Ready for Review; category details require discovery.
+**Refinement status:** Ready for Review.
 
 **Key dependencies:** selected categories, portal integration, field ownership, customer-safe language.
 
@@ -145,7 +145,7 @@ If the discovery gates pass, the conditional MVP will:
 
 **Business value:** may reduce decision friction while preserving safety and operating controls.
 
-**Refinement status:** Candidate MVP, Gated by Discovery.
+**Refinement status:** Blocked.
 
 **Key dependencies:** EPIC-001, current evidence, scheduling integration, human-role model, audit events.
 
@@ -167,7 +167,7 @@ If the discovery gates pass, the conditional MVP will:
 
 **Business value:** creates the control layer needed for safe recommendation support and reduces avoidable status chasing.
 
-**Refinement status:** Ready for Review; queue integration requires discovery.
+**Refinement status:** Ready for Review.
 
 **Key dependencies:** Operations ownership, status taxonomy, portal behavior, audit events, information-boundary review.
 
