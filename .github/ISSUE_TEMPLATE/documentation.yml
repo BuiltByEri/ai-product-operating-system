@@ -1,0 +1,27 @@
+name: Documentation
+description: Suggest a documentation correction or clarification.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: page
+    attributes:
+      label: Page or File
+      description: Which public file should be updated?
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Suggested Change
+      description: Describe the correction or clarification.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety Check
+      options:
+        - label: This request does not include client-owned, confidential, or non-public material.
+          required: true

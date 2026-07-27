@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aapos/schemas/skill-metadata.schema.json",
+  "title": "AAPOS Skill Metadata",
+  "type": "object",
+  "required": ["aapos_skill"],
+  "additionalProperties": false,
+  "properties": {
+    "aapos_skill": {
+      "type": "object",
+      "required": [
+        "name",
+        "id",
+        "version",
+        "specification_version",
+        "compatible_aapos_versions",
+        "skill_state",
+        "automation_readiness",
+        "capability",
+        "lifecycle_stage",
+        "primary_owner",
+        "description",
+        "depends_on_skills",
+        "consumes",
+        "produces",
+        "requires_human_gate",
+        "human_gate",
+        "permitted_status_values",
+        "permitted_decision_values",
+        "next_skill",
+        "extensions"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "id": { "$ref": "#/$defs/skill_id" },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "specification_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "compatible_aapos_versions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "skill_state": { "type": "string", "enum": ["Draft", "Under Review", "Approved", "Deprecated", "Retired"] },
+        "automation_readiness": { "type": "string", "enum": ["manual", "assisted", "automatable"] },
+        "capability": { "type": "string", "minLength": 1 },
+        "lifecycle_stage": {
+          "type": "object",
+          "required": ["stage_id", "stage_name", "order"],
+          "properties": {
+            "stage_id": { "$ref": "#/$defs/stage_id" },
+            "stage_name": { "type": "string", "minLength": 1 },
+            "order": { "type": "integer", "minimum": 1, "maximum": 4 }
+          }
+        },
+        "primary_owner": { "type": "string", "const": "Product Owner" },
+        "review_partners": { "type": "array", "items": { "type": "string" } },
+        "description": { "type": "string", "minLength": 1 },
+        "depends_on_skills": { "type": "array", "items": { "$ref": "#/$defs/skill_id" } },
+        "consumes": { "type": "array", "items": { "$ref": "#/$defs/artifact_reference" } },
+        "produces": { "type": "array", "items": { "$ref": "#/$defs/artifact_reference" } },
+        "requires_human_gate": { "type": "boolean" },
+        "human_gate": { "$ref": "#/$defs/human_gate" },
+        "permitted_status_values": { "type": "array", "items": { "$ref": "#/$defs/status_value" } },
+        "permitted_decision_values": { "type": "array", "items": { "$ref": "#/$defs/decision_value" } },
+        "next_skill": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/skill_id" }
+          ]
+        },
+        "extensions": { "type": "object" }
+      }
+    }
+  },
+  "$defs": {
+    "skill_id": {
+      "type": "string",
+      "enum": [
+        "vued-clarifying-questions",
+        "vued-product-plan",
+        "engineering-refinement-planner",
+        "engineering-readiness-review"
+      ]
+    },
+    "stage_id": {
+      "type": "string",
+      "enum": [
+        "product-discovery",
+        "product-recommendation",
+        "engineering-planning",
+        "executive-communication"
+      ]
+    },
+    "artifact_reference": {
+      "type": "object",
+      "required": ["artifact_id", "required"],
+      "properties": {
+        "artifact_id": { "type": "string", "pattern": "^(artifact|input)\\.[a-z0-9_]+$" },
+        "required": { "type": "boolean" }
+      }
+    },
+    "human_gate": {
+      "type": "object",
+      "required": ["gate_id", "gate_name", "approver_role", "blocks_next_stage"],
+      "properties": {
+        "gate_id": { "type": "string", "pattern": "^gate\\.[a-z0-9-]+\\.[a-z0-9-]+$" },
+        "gate_name": { "type": "string", "minLength": 1 },
+        "approver_role": { "type": "string", "minLength": 1 },
+        "blocks_next_stage": { "type": "boolean" }
+      }
+    },
+    "status_value": {
+      "type": "string",
+      "enum": ["Not Started", "In Progress", "Ready for Review", "Blocked", "Completed"]
+    },
+    "decision_value": {
+      "type": "string",
+      "enum": ["Approved", "Approved With Notes", "Rejected", "Needs Revision", "Deferred", "Human Review Required", "Not Applicable"]
+    }
+  }
+}
