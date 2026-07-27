@@ -1,5 +1,7 @@
 # AAPOS
 
+![Flagship Framework](https://img.shields.io/badge/Flagship-Framework-8DC63F?style=for-the-badge)
+
 ## AI-Assisted Product Operating System
 
 Turning ambiguous product work into governed, engineering-ready decisions.
