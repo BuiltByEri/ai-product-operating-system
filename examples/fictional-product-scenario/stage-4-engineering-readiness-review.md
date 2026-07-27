@@ -1,6 +1,6 @@
 # Stage 4: Engineering Readiness Review
 
-This artifact is fictional and demonstrates AAPOS Executive Communication. It translates the approved Product and Engineering artifacts into a decision story. It does not record the final decision; that belongs in the separate approval record.
+This artifact is fictional and demonstrates AAPOS Executive Communication. It translates the approved Product Recommendation, Engineering Refinement Package, and Engineering Refinement Workbook Map into a decision story. Product Owner final approval of this communication belongs in the separate approval record. Leadership direction follows that framework gate and is a separate business decision.
 
 ## 1. Executive Summary
 
@@ -36,15 +36,15 @@ Proceed with discovery and conditional MVP refinement. Do not authorize autonomo
 
 ### Decision Requested
 
-Authorize the four-week discovery and refinement package, confirm the human-control boundary, and require a return decision before implementation commitment.
+Provide leadership direction within four weeks on whether to proceed with bounded Engineering discovery and refinement. The duration and capacity required for that work remain uncommitted until Engineering completes discovery. Confirm the human-control boundary and require a return decision before implementation commitment.
 
 ## 2. AAPOS Operating Model and Product Owner Judgment
 
 | Stage | AI-Assisted Work | Human Ownership | Output Used Here |
 |---|---|---|---|
-| Product Discovery | Separate the ambiguous request into decision-changing questions and evidence gaps. | Product Owner selects the questions, validates evidence, and decides whether to continue. | Discovery questions and approved answers |
+| Product Discovery | Separate the ambiguous request into decision-changing questions and evidence gaps. | Product Owner reviews the complete problem framing, evidence, assumptions, risks, gaps, and questions. | Discovery Summary |
 | Product Recommendation | Compare candidate work using VUED Risk and draft the Product plan. | Product Owner chooses the priority, scope, tradeoffs, and success definition. | Locked Product Recommendation |
-| Engineering Planning | Translate Product intent into epics, stories, acceptance intent, risks, dependencies, discovery, and sequencing. | Product Owner protects intent; Engineering validates feasibility and implementation choices. | Canonical Engineering Refinement Package |
+| Engineering Planning | Translate Product intent into epics, stories, acceptance intent, risks, dependencies, discovery, and sequencing. | Product Owner protects intent; Engineering validates feasibility and implementation choices. | Canonical Engineering Refinement Package and Engineering Refinement Workbook Map |
 | Executive Communication | Translate the package into a decision story for a mixed audience. | Product Owner owns the recommendation; leadership owns the requested business decision. | This Engineering Readiness Review |
 
 **Control principle:** AI accelerates analysis and drafting. Humans decide, approve, and remain accountable.
@@ -59,7 +59,7 @@ Authorize the four-week discovery and refinement package, confirm the human-cont
 | Which requests require human approval? | A single automation policy would weaken controls or over-restrict safe work. | Made supervisor review a hard gate and removed autonomous assignment from MVP. | Safety-sensitive and after-hours work requires supervisor approval. |
 | Is technician evidence reliable enough? | Recommendations are only as safe as the evidence supporting eligibility. | Added freshness visibility and an Engineering data gate. | Availability is current, certifications are nightly, and location is unreliable. |
 | What happens when evidence or integration fails? | Unresolved work must remain visible and owned. | Added the exception queue, recovery states, and auditability to MVP scope. | Operations requires a named manual queue with reason and owner. |
-| What does the four-week date represent? | A decision deadline should not become a delivery promise. | Limited the commitment to direction and discovery. | The date supports internal planning, not a customer contract. |
+| What does the four-week date represent? | A decision deadline should not become a work-duration or delivery promise. | Limited the four-week commitment to leadership direction only; discovery and refinement timing remain uncommitted. | The date supports internal planning, not a customer contract. |
 
 ### Highest-Leverage Questions
 
@@ -141,7 +141,7 @@ Help dispatchers make faster, better-supported assignment decisions by collectin
 
 ### Readiness Assessment
 
-The package is ready for bounded Engineering discovery and conditional refinement. It is not ready for full implementation commitment. Recommendation work remains blocked until the data, human-control, audit, and recovery gates are satisfied.
+The Engineering Refinement Package and Workbook Map are complete, mutually traceable planning artifacts. They are ready to support bounded Engineering discovery and conditional refinement. They do not authorize implementation. Recommendation work remains blocked until the data, human-control, audit, and recovery gates are satisfied and a return decision is recorded.
 
 ## 7. Deliberately Deferred Work
 
@@ -171,7 +171,7 @@ No sprint, capacity, budget, or delivery-date commitment is included.
 
 | Audience | Decision or Message | Why | Next Step |
 |---|---|---|---|
-| Leadership | Approve discovery and conditional MVP refinement, not auto-dispatch. | Current evidence supports a governed workflow but not autonomous assignment. | Confirm scope, four-week direction, and return gate. |
+| Leadership | Provide direction within four weeks on whether bounded discovery and conditional MVP refinement should proceed; do not approve auto-dispatch. | Current evidence supports a governed workflow but not autonomous assignment. | Confirm the Product boundary and return gate without committing work duration or capacity. |
 | Operations and Dispatch | Humans remain assignment owners; intake and exception visibility are first priorities. | The workflow must reduce friction without hiding unresolved work. | Participate in category, rationale, override, and queue discovery. |
 | Safety | Protected-work approval and evidence freshness are hard gates. | The product cannot weaken operating controls. | Approve categories, certification threshold, roles, and stop conditions. |
 | Engineering | Product intent and exclusions are locked; feasibility remains open. | Engineering should translate and challenge implementation, not silently redesign scope. | Run bounded discovery and return estimates only after boundaries are clear. |
@@ -232,22 +232,23 @@ Approve definitions and baselines for request completeness, clarification contac
 
 ## 12. Decision Requested
 
-Leadership is asked to choose one of the following:
+Within four weeks, leadership is asked to choose one of the following business directions:
 
-1. **Approve With Notes:** authorize bounded discovery and conditional MVP refinement while retaining all human-control and scope constraints.
-2. **Return for Revision:** request a narrower Product boundary or additional discovery before Engineering begins.
-3. **Defer:** retain the current workflow until stronger evidence or capacity exists.
-4. **Reject:** stop the initiative.
+1. **Approved With Notes:** authorize bounded discovery and conditional MVP refinement while retaining all human-control and scope constraints.
+2. **Needs Revision:** request a narrower Product boundary or additional information before Engineering begins.
+3. **Deferred:** retain the current workflow until stronger evidence or capacity exists.
+4. **Rejected:** stop the initiative.
 
-If approved, the next required decision occurs after Engineering discovery and before implementation commitment.
+The four-week period applies only to leadership direction. It is not an estimate for discovery or refinement. The duration, capacity, budget, and delivery timing for that work remain uncommitted. If leadership directs the work to proceed, the next required decision occurs after Engineering discovery and before implementation commitment.
 
 ## Appendix: Traceability and Boundaries
 
 ### Source Artifacts
 
-- Stage 1 Decision-Changing Discovery Questions
-- Stage 2 locked Product Recommendation
-- Stage 3 Canonical Engineering Refinement Package
+- Stage 1 [`Discovery Summary`](stage-1-discovery-summary.md)
+- Stage 2 [`Approved Product Recommendation`](stage-2-product-recommendation.md)
+- Stage 3 [`Canonical Engineering Refinement Package`](stage-3-engineering-refinement-summary.md)
+- Stage 3 [`Engineering Refinement Workbook Map`](stage-3-engineering-refinement-workbook-map.md)
 
 ### Product Boundary Reminder
 

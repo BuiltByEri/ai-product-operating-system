@@ -22,9 +22,10 @@ All organizations, people, evidence, numbers, systems, constraints, and decision
 ## End-to-End Artifacts
 
 - [`scenario.md`](scenario.md): the ambiguous intake and fictional evidence packet
-- [`stage-1-discovery-summary.md`](stage-1-discovery-summary.md): five decision-changing questions, their answers, and the human proceed gate
+- [`stage-1-discovery-summary.md`](stage-1-discovery-summary.md): the Discovery Summary, including five decision-changing questions, their answers, and the human review gate
 - [`stage-2-product-recommendation.md`](stage-2-product-recommendation.md): the Product plan, “What’s the VUED Risk?” analysis, prioritization, scope, and locked Product Owner decision
 - [`stage-3-engineering-refinement-summary.md`](stage-3-engineering-refinement-summary.md): the canonical Engineering Refinement Package
+- [`stage-3-engineering-refinement-workbook-map.md`](stage-3-engineering-refinement-workbook-map.md): the structured Engineering Refinement Workbook Map
 - [`stage-4-engineering-readiness-review.md`](stage-4-engineering-readiness-review.md): the executive decision story
 - [`approval-record.md`](approval-record.md): the separate human governance record
 
@@ -32,9 +33,9 @@ All organizations, people, evidence, numbers, systems, constraints, and decision
 
 | Stage | Primary Artifact | Human Gate | What Becomes Locked |
 |---|---|---|---|
-| Product Discovery | Decision-Changing Discovery Questions | Continue, investigate, or stop | Questions and validated evidence, not a solution |
+| Product Discovery | Discovery Summary | Approve, approve with notes, revise, defer, or reject | Problem framing, evidence, assumptions, gaps, risks, and decision-changing questions, not a solution |
 | Product Recommendation | Approved Product Recommendation | Approve, approve with notes, return, or reject | Product intent, priority, scope, tradeoffs, and success definition |
-| Engineering Planning | Canonical Engineering Refinement Package | Confirm Product intent was preserved | Engineering planning boundary and unresolved discovery |
-| Executive Communication | Engineering Readiness Review | Make the requested business decision | Authorization to proceed, narrow, investigate, defer, or stop |
+| Engineering Planning | Canonical Engineering Refinement Package and Engineering Refinement Workbook Map | Confirm Product intent was preserved and both outputs are traceable | Engineering planning boundary, structured reference, and unresolved discovery |
+| Executive Communication | Engineering Readiness Review | Product Owner gives final approval to the recommendation and decision request; leadership direction follows separately | Approved communication boundary, confidence language, and business decision request |
 
-The approval record is intentionally separate from the readiness review. The review requests a decision; the approval record preserves the human decision that follows.
+The approval record is intentionally separate from the readiness review. It preserves all four AAPOS human gates, including Product Owner Final Approval, while the subsequent leadership business decision remains separate from the framework gate sequence.

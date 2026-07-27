@@ -164,7 +164,7 @@ Baselines must be established before targets are approved.
 
 ## Product Owner Decision
 
-- **Decision:** Approve With Notes.
+- **Decision:** Approved With Notes.
 - **Recommended priority:** guided intake and accountable exception handling first; governed recommendation support second.
 - **Recommended MVP:** guided intake, completeness validation, human-approved recommendations for selected standard categories, supervisor gates for protected work, visible exceptions, auditability, and safe status.
 - **Not approved:** autonomous assignment, location-based optimization, broad analytics, or delivery-date commitment.
