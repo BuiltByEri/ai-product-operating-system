@@ -64,7 +64,31 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/ARTIFACT_MODEL.md`
 
 ## 6. Human Gate
 
-The Product Owner reviews the final artifact, verifies that Engineering detail has been translated into plain language, confirms the recommendation, and approves the final communication.
+The Product Owner applies the Final Approval criteria in the [`Human Gate Review Guide`](../../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
+### Human Review Checklist
+
+- Confirm the audience and requested business decision are unmistakable.
+- Verify the recommendation matches the approved Product Recommendation and Engineering planning artifacts.
+- Represent evidence, confidence, assumptions, dependencies, blockers, and risks honestly.
+- Keep readiness, Product Owner approval, leadership direction, and implementation authorization distinct.
+- Preserve relevant deferred and out-of-scope boundaries.
+- Translate technical detail into plain language without changing its meaning.
+- Separate decision timing from discovery, refinement, or delivery duration.
+- Remove confidential, client-identifying, internal, fictional-as-real, and unsupported claims.
+- Confirm the Approval Record is complete before sharing.
+
+### Return or Block When
+
+Return or block the artifact when the decision request is unclear, the communication conflicts with approved sources, uncertainty is hidden, a business decision is presented as an AAPOS gate, timing implies an unapproved delivery promise, or confidential or unsupported information appears.
+
+### Decision Boundary
+
+Final Approval permits the reviewed communication and decision request to be shared. Approval does not record the audience's later decision or authorize implementation, estimates, budget, capacity, or delivery.
+
+### Record
+
+Record the source artifacts reviewed, required communication changes, confidence assessment, material risks, conditions, remaining blockers, audience, decision requested, and next action permitted.
 
 ## 7. Outputs
 

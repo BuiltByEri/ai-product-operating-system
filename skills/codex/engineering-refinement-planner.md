@@ -62,7 +62,38 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/ARTIFACT_MODEL.md`
 
 ## 6. Human Gate
 
-Engineering validates feasibility, dependencies, sequencing, and technical risk. Product confirms that Engineering planning has not changed approved Product Intent or expanded MVP scope.
+Engineering and the Product Owner apply the Engineering Review criteria in the [`Human Gate Review Guide`](../../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
+### Human Review Checklist
+
+Engineering verifies:
+
+- technical assumptions, feasibility questions, data behavior, integrations, access controls, audit needs, and system boundaries are visible;
+- business rules, acceptance intent, edge cases, failure behavior, recovery, and operational ownership are defined for the stated refinement status;
+- dependencies, risks, discovery items, open questions, and sequencing identify what must be learned before estimation or implementation; and
+- no architecture, estimate, capacity, or delivery commitment is implied without accountable Engineering validation.
+
+The Product Owner verifies:
+
+- every structured work item traces to approved Product Intent;
+- MVP and out-of-scope boundaries remain intact;
+- Engineering translated rather than reprioritized the recommendation;
+- Product and Engineering assumptions remain distinguishable;
+- deferred work did not enter the MVP;
+- the package and Workbook Map agree; and
+- readiness language does not imply approval or implementation authorization.
+
+### Return or Block When
+
+Return or block the artifacts when work is untraceable, scope drift is present, failure or recovery behavior is incomplete, package and Workbook Map conflict, status and decision semantics are mixed, or unsupported technical and delivery commitments appear.
+
+### Decision Boundary
+
+Approval permits the reviewed planning artifacts to inform Executive Communication and any explicitly approved bounded discovery. Approval does not authorize implementation, estimates, budget, capacity, sprint commitments, dates, rollout, or Product-scope changes.
+
+### Record
+
+Record the Product and Engineering evidence reviewed, scope-integrity result, feasibility conditions, discovery blockers, risk owners, disagreements, conditions, and next action permitted.
 
 ## 7. Outputs
 
