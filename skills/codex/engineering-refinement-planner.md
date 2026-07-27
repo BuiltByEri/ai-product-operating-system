@@ -1,119 +1,102 @@
 ---
-name: engineering-refinement-planner
-description: Use when the user provides an approved product recommendation, PRD, or Claude product recommendation and wants Codex to convert it into an engineering refinement plan plus workbook-ready structured data covering epics, stories, dependencies, discovery, risks, sequencing, and readiness. Do not use for product discovery or reprioritization.
+aapos_skill:
+  name: "Engineering Refinement Planner"
+  id: "engineering-refinement-planner"
+  version: "1.0.0"
+  specification_version: "1.0.0"
+  compatible_aapos_versions: [">=1.0.0 <2.0.0"]
+  skill_state: "Approved"
+  automation_readiness: "assisted"
+  capability: "engineering-planning"
+  lifecycle_stage: { stage_id: "engineering-planning", stage_name: "Engineering Planning", order: 3 }
+  primary_owner: "Product Owner"
+  review_partners: ["Engineering"]
+  description: "Translate an approved Product Recommendation into an Engineering Refinement Package and Workbook Map without changing Product scope."
+  depends_on_skills: ["vued-product-plan"]
+  consumes:
+    - { artifact_id: "artifact.product_recommendation", required: true }
+    - { artifact_id: "artifact.approval_record", required: true }
+  produces:
+    - { artifact_id: "artifact.engineering_refinement_package", required: true }
+    - { artifact_id: "artifact.engineering_refinement_workbook_map", required: true }
+  requires_human_gate: true
+  human_gate:
+    gate_id: "gate.engineering-planning.engineering-review"
+    gate_name: "Engineering Review"
+    approver_role: "Engineering and Product Owner"
+    blocks_next_stage: true
+  permitted_status_values: ["Not Started", "In Progress", "Ready for Review", "Blocked", "Completed"]
+  permitted_decision_values: ["Approved", "Approved With Notes", "Rejected", "Needs Revision", "Deferred", "Human Review Required", "Not Applicable"]
+  next_skill: "engineering-readiness-review"
+  extensions: {}
 ---
 
 # Engineering Refinement Planner
 
-## Overview
+## 1. Purpose
 
-Use this skill after product discovery is complete and the product recommendation is already approved. Convert the locked product decision into engineering-ready planning artifacts without changing scope, reprioritizing, or inventing product requirements.
+Convert a locked, approved Product Recommendation into Engineering planning artifacts without changing scope, reprioritizing work, or inventing Product requirements.
 
-The skill produces two synchronized outputs:
+## 2. When to Use
 
-1. **Canonical Engineering Refinement Package**: readable engineering plan.
-2. **Workbook Population Dataset**: structured tables for a refinement workbook.
+Use this skill after Product Recommendation approval and before Executive Communication. Do not use it for Product Discovery or Product reprioritization.
 
-## Inputs
+## 3. Inputs
 
-Expect one product-level input, usually from Claude or a product lead:
+Inputs include the Approved Product Recommendation, approval record, Product Intent, MVP scope, out-of-scope boundaries, assumptions, success measures, known constraints, prioritization rationale, and VUED + Risk analysis.
 
-- Problem statement
-- Business goal
-- Approved recommendation
-- MVP / near-term scope
-- Out of scope
-- Constraints
-- Assumptions
-- Success measures
-- Prioritization rationale, if available
+## 4. Required Reading
 
-Treat the input as locked. If a missing product decision would fundamentally change the product boundary, stop and ask only the blocking questions. Otherwise proceed using the narrowest reasonable assumptions and state them clearly.
+Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/ARTIFACT_MODEL.md`](../../docs/ARTIFACT_MODEL.md), [`artifact-templates/engineering-refinement-package-template.md`](../../artifact-templates/engineering-refinement-package-template.md), and [`artifact-templates/engineering-refinement-workbook-map.md`](../../artifact-templates/engineering-refinement-workbook-map.md).
 
-## Workflow
+## 5. Execution Steps
 
-### 1. Confirm Product Boundary
+1. Confirm the locked Product boundary.
+2. Identify Product assumptions and Engineering assumptions separately.
+3. Translate Product Intent into epics, stories, Engineering discovery, dependencies, risks, deferred work, and delivery strategy.
+4. Use acceptance intent rather than detailed acceptance criteria unless exact criteria are supplied.
+5. Preserve traceability between Product Intent and Engineering planning.
+6. Create the Engineering Refinement Package.
+7. Create the Engineering Refinement Workbook Map with the same work represented in structured form.
+8. Validate scope integrity before review.
 
-Before decomposing the work, identify:
+## 6. Human Gate
 
-- Locked MVP scope
-- Explicit exclusions
-- Required controls or constraints
-- Product assumptions
-- Engineering assumptions
-- Any unresolved boundary questions
+Engineering validates feasibility, dependencies, sequencing, and technical risk. Product confirms that Engineering planning has not changed approved Product Intent or expanded MVP scope.
 
-Do not reopen prioritization unless the user explicitly asks.
+## 7. Outputs
 
-### 2. Produce the Engineering Refinement Package
+Produce:
 
-Create a readable engineering plan with these sections:
+- `artifact.engineering_refinement_package`
+- `artifact.engineering_refinement_workbook_map`
 
-1. Engineering Planning Summary
-2. Epic Inventory
-3. Epic Details
-4. Story Inventory
-5. Story Details
-6. Engineering Discovery
-7. Deferred Backlog
-8. Risk Register
-9. Delivery Strategy
-10. Engineering Readiness Statement
+The two outputs must contain the same work at different levels of structure.
 
-For each epic include business goal, user problem, business value, major features, dependencies, risks, open engineering questions, and refinement status.
+## 8. Status Values
 
-For each story include user story, acceptance intent, business rules, edge/error behavior, dependencies, and refinement status. Use **acceptance intent**, not detailed acceptance criteria, unless the product input already provides exact criteria.
+Use only approved AAPOS status values from [`core/AAPOS_STATUS_MODEL.md`](../../core/AAPOS_STATUS_MODEL.md).
 
-### 3. Produce the Workbook Population Dataset
+## 9. Decision Values
 
-Immediately after the engineering package, create structured workbook-ready tables. Read `references/workbook-schema.md` when producing this dataset or when the user asks for an actual workbook file.
+Use only approved AAPOS decision values from [`core/AAPOS_DECISION_MODEL.md`](../../core/AAPOS_DECISION_MODEL.md).
 
-The dataset must contain the same engineering work as the package. Do not introduce new work, remove work, or summarize away stories.
+## 10. Guardrails
 
-### 4. Validate Traceability
+- Preserve the approved Product Recommendation.
+- Do not redesign Product scope.
+- Do not expand the MVP.
+- Do not reprioritize Product work.
+- Do not estimate effort, velocity, story points, or dates unless supplied.
+- Do not design architecture without sufficient Engineering input.
+- Do not hide uncertainty.
 
-Before finalizing, check:
+## 11. Exit Criteria
 
-- Every epic in the plan appears in the workbook dataset.
-- Every story appears exactly once in the story inventory and once under its epic.
-- Every discovery item has a related epic and, when applicable, a related story.
-- Deferred work is clearly separated from MVP scope.
-- Risks include mitigation and owner when known.
-- Delivery strategy sequences discovery, refinement, build, validation, and future backlog.
+Exit when the Engineering Refinement Package and Workbook Map are traceable to the approved Product Recommendation and the Engineering review gate is ready or completed.
 
-## Rules
+## 12. Version History
 
-Do:
-
-- Preserve the approved product recommendation.
-- State assumptions clearly.
-- Separate product decisions from engineering discovery.
-- Prefer clear engineering handoff language.
-- Leave unknown workbook cells blank or mark them unknown rather than inventing.
-
-Do not:
-
-- Redesign product scope.
-- Expand the MVP.
-- Reprioritize work.
-- Estimate effort, velocity, story points, or dates unless supplied.
-- Design architecture.
-- Create sprint commitments.
-- Promote operational workarounds into product epics unless explicitly approved.
-- Hide uncertainty.
-
-## Output Format
-
-Return exactly two top-level outputs:
-
-```markdown
-# Output 1: Canonical Engineering Refinement Package
-
-...
-
-# Output 2: Workbook Population Dataset
-
-...
-```
-
-If the user asks for a workbook file, create it from Output 2 using the workbook schema and preserve the same information.
+| Version | State | Notes |
+|---|---|---|
+| 1.0.0 | Approved | Initial public AAPOS release. |

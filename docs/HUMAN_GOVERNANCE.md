@@ -1,6 +1,6 @@
 # Human Governance
 
-## Human judgment is the control layer
+## Human Judgment Is the Control Layer
 
 AI may accelerate analysis, drafting, organization, and translation. It does not own Product decisions.
 
@@ -15,7 +15,7 @@ No AI-generated output automatically becomes:
 
 Every stage ends with a human review or approval gate.
 
-## Review gates
+## Review Gates
 
 ### Discovery Review
 
@@ -49,7 +49,7 @@ Engineering validates:
 
 Product validates that Engineering planning has not changed Product intent.
 
-### Executive Approval
+### Final Approval
 
 The Product Owner reviews and approves:
 
@@ -57,9 +57,9 @@ The Product Owner reviews and approves:
 - stakeholder messaging
 - confidence statements
 - decision request
-- final presentation
+- final communication
 
-## Human authorship and accountability
+## Human Authorship and Accountability
 
 AI contributes analysis and drafting. The human Product Owner remains the author, decision-maker, and accountable owner of the final work.
 
@@ -67,14 +67,14 @@ The Product Owner is responsible for:
 
 - validating source information
 - separating facts from assumptions
-- accepting, editing, or rejecting AI recommendations
+- accepting, editing, or rejecting AI-assisted recommendations
 - resolving stakeholder conflict
 - making priority and scope decisions
 - approving Engineering readiness
 - communicating the final recommendation
 - remaining accountable for the outcome
 
-## Responsible use requirements
+## Responsible Use Requirements
 
 - Label assumptions and unknowns.
 - Do not present AI-generated inferences as stakeholder facts.
@@ -83,15 +83,15 @@ The Product Owner is responsible for:
 - Escalate unresolved high-risk questions to the appropriate human owner.
 - Require human approval before moving to the next stage.
 
-## Recommended artifact metadata
+## Recommended Artifact Metadata
 
 ```text
-Drafted with AI assistance
-Human reviewed: Yes / No
+Drafted with AI assistance:
+Human reviewed:
 Approved by:
 Approval date:
 Open assumptions:
 Open risks:
 ```
 
-This metadata makes review status visible and prevents draft AI output from being mistaken for approved direction.
+This metadata makes review status visible and prevents draft AI-assisted output from being mistaken for approved direction.

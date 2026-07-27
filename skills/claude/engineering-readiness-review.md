@@ -1,227 +1,108 @@
 ---
-name: engineering-readiness-review
-description: Use when an Approved Product Recommendation, an Engineering Refinement Package, and an Engineering Refinement Workbook are available and the user asks for an Engineering Readiness Review presentation. This skill translates engineering planning into a business-audience story. It is distinct from a general Product presentation skill.
+aapos_skill:
+  name: "Engineering Readiness Review"
+  id: "engineering-readiness-review"
+  version: "1.0.0"
+  specification_version: "1.0.0"
+  compatible_aapos_versions: [">=1.0.0 <2.0.0"]
+  skill_state: "Approved"
+  automation_readiness: "assisted"
+  capability: "executive-communication"
+  lifecycle_stage: { stage_id: "executive-communication", stage_name: "Executive Communication", order: 4 }
+  primary_owner: "Product Owner"
+  review_partners: ["Engineering", "Leadership"]
+  description: "Translate approved Product and Engineering planning artifacts into an executive-ready decision artifact."
+  depends_on_skills: ["engineering-refinement-planner"]
+  consumes:
+    - { artifact_id: "artifact.product_recommendation", required: true }
+    - { artifact_id: "artifact.engineering_refinement_package", required: true }
+    - { artifact_id: "artifact.engineering_refinement_workbook_map", required: true }
+    - { artifact_id: "artifact.approval_record", required: true }
+  produces:
+    - { artifact_id: "artifact.engineering_readiness_review", required: true }
+    - { artifact_id: "artifact.approval_record", required: true }
+  requires_human_gate: true
+  human_gate:
+    gate_id: "gate.executive-communication.final-approval"
+    gate_name: "Final Approval"
+    approver_role: "Product Owner"
+    blocks_next_stage: true
+  permitted_status_values: ["Not Started", "In Progress", "Ready for Review", "Blocked", "Completed"]
+  permitted_decision_values: ["Approved", "Approved With Notes", "Rejected", "Needs Revision", "Deferred", "Human Review Required", "Not Applicable"]
+  next_skill: null
+  extensions: {}
 ---
 
 # Engineering Readiness Review
 
-## Purpose
+## 1. Purpose
 
-Three source artifacts come in:
+Translate the Approved Product Recommendation, Engineering Refinement Package, and Engineering Refinement Workbook Map into a business-audience decision artifact.
 
-1. Approved Product Recommendation
-2. Canonical Engineering Refinement Package
-3. Engineering Refinement Workbook
+## 2. When to Use
 
-One output goes out:
+Use this skill after Engineering Planning when Product and Engineering have reviewed the refinement outputs and a mixed audience needs a clear recommendation, risk framing, readiness summary, and decision request.
 
-- an Engineering Readiness Review presentation that a mixed room can follow without knowing Jira, Azure DevOps, Epic IDs, Story IDs, Discovery IDs, or Risk IDs
+## 3. Inputs
 
-## Artifact boundaries
+Inputs include the Approved Product Recommendation, Engineering Refinement Package, Engineering Refinement Workbook Map, approval record, dependencies, risks, open Engineering questions, deferred work, and Product Owner confidence statement.
 
-- The Engineering Refinement Package is research and Engineering's source of truth.
-- The Engineering Refinement Workbook is the implementation reference. Detailed Engineering content lives there.
-- The Engineering Readiness Review is the story: Product thinking translated for people who were not in the Engineering planning room.
+## 4. Required Reading
 
-## The rule that matters most
+Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/ARTIFACT_MODEL.md`](../../docs/ARTIFACT_MODEL.md), and [`artifact-templates/engineering-readiness-review-template.md`](../../artifact-templates/engineering-readiness-review-template.md).
 
-**Translate. Do not transcribe.**
+## 5. Execution Steps
 
-Before finalizing any slide, ask:
+1. Identify the audience and decision needed.
+2. Translate Product Intent into plain business language.
+3. Summarize Engineering readiness without exposing internal planning identifiers.
+4. Explain VUED + Risk, dependencies, tradeoffs, deferred work, and open questions.
+5. State confidence honestly.
+6. Provide stakeholder communication guidance.
+7. Create the final decision artifact.
+8. Prepare the approval record for Product Owner final approval.
 
-> Would a Product Owner naturally say this aloud in the room?
+## 6. Human Gate
 
-If the answer is no, rewrite it in plain business language.
+The Product Owner reviews the final artifact, verifies that Engineering detail has been translated into plain language, confirms the recommendation, and approves the final communication.
 
-## Non-Negotiable Rules
+## 7. Outputs
 
-- Never place Epic IDs, Story IDs, Discovery IDs, Risk IDs, Jira terminology, Azure DevOps terminology, or internal Engineering identifiers on a slide.
-- Reference the Workbook; never duplicate it.
-- Do not reproduce acceptance criteria, business rules, or Definition of Ready content in the presentation.
-- Speaker notes are required on every slide.
-- Speaker note format: Key Message / Why It Matters / Transition / Likely Question / Suggested Answer.
-- AI must be framed as a partnership, never as acting alone.
-- Product Owner judgment and human approval remain explicit.
-- Do not reinterpret source artifacts, redesign Product scope, reprioritize Engineering work, or invent Epics or Stories.
+Produce `artifact.engineering_readiness_review` and update `artifact.approval_record` with:
 
-## Presentation Audience
+- executive summary
+- problem and Product Intent
+- VUED + Risk summary
+- Engineering readiness summary
+- dependencies and open questions
+- risks and tradeoffs
+- deferred work
+- decision requested
+- final approval metadata
 
-Design for a mixed room that may include:
+## 8. Status Values
 
-- VP of Product
-- Engineering Manager
-- Director of Operations
-- Account Executive or customer-facing leader
-- Compliance or Risk partner
+Use only approved AAPOS status values from [`core/AAPOS_STATUS_MODEL.md`](../../core/AAPOS_STATUS_MODEL.md).
 
-Every person should understand the recommendation without needing Engineering planning terminology.
+## 9. Decision Values
 
-## Slide Architecture
+Use only approved AAPOS decision values from [`core/AAPOS_DECISION_MODEL.md`](../../core/AAPOS_DECISION_MODEL.md).
 
-### 1. Cover
+## 10. Guardrails
 
-Engineering Readiness Review, initiative subtitle, prepared by, date, and initiative.
+- Translate. Do not transcribe.
+- Do not reproduce detailed acceptance criteria or internal Engineering identifiers.
+- Do not reinterpret source artifacts.
+- Do not redesign Product scope.
+- Do not invent epics, stories, outcomes, or commitments.
+- Do not present AI as acting alone.
 
-### 2. Executive Summary
+## 11. Exit Criteria
 
-Communicate:
+Exit when the Engineering Readiness Review is complete, uncertainty is represented honestly, and the Product Owner final approval gate is recorded.
 
-- Business Problem
-- Who Is Affected
-- Business Objective
-- Recommended Direction
-- Success Definition
-- Executive Recommendation
+## 12. Version History
 
-### 3. Product Operating Model
-
-Show the AI-assisted workflow and the Product Owner Judgment statement.
-
-### 4. Discovery Findings
-
-Translate the questions that changed the recommendation into:
-
-- Question
-- Why It Matters
-- Decision It Would Change
-
-Include Top 3 if time-limited, Stakeholder Responses, and Updated Assumptions.
-
-### 5. Problem & Product Intent
-
-Include:
-
-- Problem Statement
-- Business Outcome
-- User Outcome
-- Constraints
-- Success Metrics
-- In Scope
-- Out of Scope
-- Critical Assumptions
-
-### 6. VUED Prioritization
-
-Use translated work-item names and include:
-
-- Value
-- Urgency
-- Effort
-- Dependencies
-- Risk
-- Priority
-- Reasoning
-- Key Tradeoffs
-
-### 7. Engineering Refinement Overview
-
-This section is dynamic.
-
-Create:
-
-- one overview slide with one plain-language card per Epic or initiative
-- one slide per Epic
-- one consolidated Engineering Discovery slide
-- one Deferred Work slide
-
-Each Epic slide includes:
-
-- Epic Name in plain business language
-- Business Goal
-- Business Value
-- Stories Included as translated action bullets
-- Refinement Status in plain language
-- Key Dependencies
-- Open Questions in business language
-
-Never display source-system IDs.
-
-### 8. Delivery Strategy
-
-Show stages implied by the source material. For each include:
-
-- Objective
-- Decision Point
-
-Treat the sequence as directional unless commitments are supported by supplied capacity and estimates.
-
-### 9. Stakeholder Communication
-
-Provide concise messages for:
-
-- Leadership
-- Engineering
-- Operations
-- Sales or Customer-facing teams
-- Compliance or Risk
-
-Each covers Decision, Reason, and Next Steps.
-
-### 10. Risks & Tradeoffs
-
-Translate the risk register into:
-
-- Risk
-- Impact
-- Likelihood
-- What We Are Doing About It
-- Owner
-
-Also include Accepted Tradeoffs, Deferred Decisions, and Open Questions.
-
-### 11. Final Recommendation
-
-Include:
-
-- the ask
-- Why
-- Expected Business Outcome
-- Expected User Outcome
-- Success Metrics
-- Decision Requested
-- Confidence Level
-
-### 12. Appendix
-
-Include:
-
-- AI Tools & Contribution
-- Detailed Engineering Implementation reference
-- Additional Assumptions
-- Parking Lot
-- Future Considerations
-
-## Workbook Reference
-
-Engineering-facing slides should include a short link label such as:
-
-```text
-Full engineering detail ↗
-```
-
-The full Workbook URL belongs in the hyperlink target, not as visible slide text.
-
-## Required QA
-
-Before delivery:
-
-1. Inspect every slide for overflow and overlap.
-2. Scan presentation text for Epic, Story, Discovery, and Risk ID patterns. Zero matches required.
-3. Confirm every slide has complete speaker notes.
-4. Confirm the presentation references the Workbook without reproducing it.
-5. Apply the say-it-aloud test to a representative sample of slides.
-6. Confirm uncertainty and confidence are stated honestly.
-7. Confirm the final output remains faithful to the Approved Product Recommendation.
-
-## Final Standard
-
-The audience should understand:
-
-- the business problem
-- the Product reasoning
-- why the recommendation was made
-- what Engineering is refining
-- what still requires discovery
-- what decision is requested
-
-They should not need to understand Engineering IDs or internal planning terminology to follow the story.
+| Version | State | Notes |
+|---|---|---|
+| 1.0.0 | Approved | Initial public AAPOS release. |
