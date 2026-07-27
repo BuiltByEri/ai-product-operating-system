@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aapos/schemas/approval-record.schema.json",
+  "title": "AAPOS Approval Record",
+  "type": "object",
+  "required": ["initiative", "aapos_version", "gate_outcomes"],
+  "additionalProperties": true,
+  "properties": {
+    "initiative": { "type": "string", "minLength": 1 },
+    "aapos_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "drafted_with_ai_assistance": { "type": "boolean" },
+    "human_reviewed": { "type": "boolean" },
+    "record_owner": { "type": "string", "minLength": 1 },
+    "gate_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["gate_id", "gate_name", "artifact_reviewed", "decision", "reviewer", "date"],
+        "properties": {
+          "gate_id": { "type": "string", "pattern": "^gate\\.[a-z0-9-]+\\.[a-z0-9-]+$" },
+          "gate_name": { "type": "string", "minLength": 1 },
+          "artifact_reviewed": { "type": "string", "minLength": 1 },
+          "decision": {
+            "type": "string",
+            "enum": ["Approved", "Approved With Notes", "Rejected", "Needs Revision", "Deferred", "Human Review Required", "Not Applicable"]
+          },
+          "reviewer": { "type": "string", "minLength": 1 },
+          "date": { "type": "string", "format": "date" },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

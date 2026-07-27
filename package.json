@@ -1,0 +1,20 @@
+{
+  "name": "ai-product-operating-system",
+  "version": "1.0.0",
+  "description": "A practical operating system for AI-assisted Product Ownership, turning ambiguous product problems into clear, implementation-ready decisions.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuiltByEri/ai-product-operating-system.git"
+  },
+  "scripts": {
+    "test": "npm run validate",
+    "validate": "npm run validate:skills && npm run validate:links && npm run validate:safety && npm run validate:version",
+    "validate:skills": "node scripts/validate-skills.mjs",
+    "validate:links": "node scripts/validate-links.mjs",
+    "validate:safety": "node scripts/scan-forbidden-terms.mjs",
+    "validate:version": "node scripts/validate-version.mjs"
+  }
+}
