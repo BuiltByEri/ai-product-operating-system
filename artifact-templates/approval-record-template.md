@@ -28,6 +28,33 @@ Record owner:
 | `gate.engineering-planning.engineering-review` | Engineering Review | Engineering Refinement Package and Workbook Map |  |  |  |  |
 | `gate.executive-communication.final-approval` | Final Approval | Engineering Readiness Review |  |  |  |  |
 
+Use only approved AAPOS decision values. A gate outcome records human judgment; it is not a lifecycle status.
+
+## Gate Review Details
+
+Complete one review detail block for every gate outcome. Use the stage criteria in the [`Human Gate Review Guide`](../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
+### Gate Review Detail
+
+```text
+Gate ID:
+Decision rationale:
+Evidence reviewed:
+-
+Review criteria satisfied:
+-
+Conditions:
+- None
+Return reason:
+- Not applicable
+Remaining blockers:
+- None
+Next action permitted:
+Decision boundary:
+```
+
+Copy this block for each reviewed gate. Conditions, return reasons, and blockers must be explicit; use `None` or `Not applicable` rather than leaving the fields ambiguous.
+
 ## Open Assumptions
 
 - TBD
