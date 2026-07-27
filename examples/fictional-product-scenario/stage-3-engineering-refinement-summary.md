@@ -112,10 +112,10 @@ If the discovery gates pass, the conditional MVP will:
 
 | Story | Story Summary | Acceptance Intent | Refinement Status | Discovery Needed | Key Dependency | Primary Risk |
 |---|---|---|---|---|---|---|
-| ST-001 | Define recommendation-eligible service categories | Identify which standard categories may receive recommendations and which require protected handling. | Ready for Discovery | Category rules, exclusions, escalation conditions. | Operations and Safety policy review. | Unsafe or ambiguous work becomes eligible. |
-| ST-002 | Validate technician evidence and freshness | Document availability, certification, and approved evidence sources with timestamps and failure behavior. | Ready for Discovery | Source ownership, sync timing, missing/stale states. | Technician data and scheduling interfaces. | Stale data produces false eligibility. |
-| ST-003 | Validate dispatcher decision and explanation needs | Determine what evidence dispatchers need to accept, override, or reject a recommendation. | Ready for Discovery | Workflow observation, explanation content, override reasons. | Dispatcher participation. | A new screen adds work without improving decisions. |
-| ST-004 | Define audit and baseline model | Establish required events and the pre-rollout measures needed to evaluate the workflow. | Ready for Discovery | Audit retention, event ownership, baseline definitions. | Product, Engineering, Operations, Safety. | Outcome claims cannot be supported. |
+| ST-001 | Define recommendation-eligible service categories | Identify which standard categories may receive recommendations and which require protected handling. | In Progress | Category rules, exclusions, escalation conditions. | Operations and Safety policy review. | Unsafe or ambiguous work becomes eligible. |
+| ST-002 | Validate technician evidence and freshness | Document availability, certification, and approved evidence sources with timestamps and failure behavior. | In Progress | Source ownership, sync timing, missing/stale states. | Technician data and scheduling interfaces. | Stale data produces false eligibility. |
+| ST-003 | Validate dispatcher decision and explanation needs | Determine what evidence dispatchers need to accept, override, or reject a recommendation. | In Progress | Workflow observation, explanation content, override reasons. | Dispatcher participation. | A new screen adds work without improving decisions. |
+| ST-004 | Define audit and baseline model | Establish required events and the pre-rollout measures needed to evaluate the workflow. | In Progress | Audit retention, event ownership, baseline definitions. | Product, Engineering, Operations, Safety. | Outcome claims cannot be supported. |
 
 ### EPIC-002: Guided Request Intake and Completeness
 
@@ -135,7 +135,7 @@ If the discovery gates pass, the conditional MVP will:
 |---|---|---|---|---|---|---|
 | ST-005 | Present category-specific required information | Requesters see the information required for the selected service category before submission. | Ready for Review | Final field set and conditional rules. | ST-001 and portal capability. | Intake becomes longer without improving completeness. |
 | ST-006 | Validate completeness before recommendation eligibility | An incomplete request cannot appear ready for a technician recommendation. | Ready for Review | Validation timing, draft behavior, exception rules. | Field ownership and status model. | Validation blocks legitimate urgent work. |
-| ST-007 | Reuse existing request information safely | Available information is reused without asking the requester to enter it again. | Needs Discovery | Source-of-truth and conflict handling. | Portal and account data access. | Old information is silently reused. |
+| ST-007 | Reuse existing request information safely | Available information is reused without asking the requester to enter it again. | In Progress | Source-of-truth and conflict handling. | Portal and account data access. | Old information is silently reused. |
 
 ### EPIC-003: Governed Dispatcher Recommendation Workspace
 
@@ -153,11 +153,11 @@ If the discovery gates pass, the conditional MVP will:
 
 | Story | Story Summary | Acceptance Intent | Refinement Status | Discovery Needed | Key Dependency | Primary Risk |
 |---|---|---|---|---|---|---|
-| ST-008 | Display eligible technician recommendations | A dispatcher sees only candidates who satisfy the approved Product and Safety eligibility rules. | Gated by Discovery | Matching inputs and exclusion logic. | ST-001 and ST-002. | Ineligible technicians are recommended. |
-| ST-009 | Explain recommendation evidence and freshness | Each recommendation shows the relevant availability, certification, category match, and data age. | Gated by Discovery | Explanation design and stale thresholds. | ST-002 and ST-003. | Dispatcher assumes confidence that the evidence does not support. |
+| ST-008 | Display eligible technician recommendations | A dispatcher sees only candidates who satisfy the approved Product and Safety eligibility rules. | Blocked | Matching inputs and exclusion logic. | ST-001 and ST-002. | Ineligible technicians are recommended. |
+| ST-009 | Explain recommendation evidence and freshness | Each recommendation shows the relevant availability, certification, category match, and data age. | Blocked | Explanation design and stale thresholds. | ST-002 and ST-003. | Dispatcher assumes confidence that the evidence does not support. |
 | ST-010 | Require dispatcher approval | No standard assignment is recorded until a dispatcher explicitly approves it. | Ready for Review | Role mapping and scheduling write behavior. | Scheduling interface and audit model. | Recommendation is mistaken for assignment. |
 | ST-011 | Require supervisor approval for protected work | Safety-sensitive and after-hours work cannot be assigned without the required supervisor action. | Ready for Review | Protected-category rules and escalation. | Safety policy and role model. | A protected job bypasses review. |
-| ST-012 | Capture override and rejection reasons | Dispatchers can reject or override a recommendation and record a structured reason. | Gated by Discovery | Reason taxonomy and free-text boundaries. | ST-003 and audit model. | Overrides are hidden or used as employee scoring. |
+| ST-012 | Capture override and rejection reasons | Dispatchers can reject or override a recommendation and record a structured reason. | Blocked | Reason taxonomy and free-text boundaries. | ST-003 and audit model. | Overrides are hidden or used as employee scoring. |
 
 ### EPIC-004: Exceptions, Status, and Operational Recovery
 
@@ -177,8 +177,8 @@ If the discovery gates pass, the conditional MVP will:
 |---|---|---|---|---|---|---|
 | ST-013 | Route unresolved work to an exception queue | Incomplete, conflicting, rejected, unavailable, or failed recommendations remain visible with a reason and owner. | Ready for Review | Queue platform, ownership, deduplication, retry. | Operations workflow. | Work disappears or exists in two queues. |
 | ST-014 | Publish safe request status | Customers and account teams see a clear status without internal safety notes or employee information. | Ready for Review | External taxonomy and portal mapping. | Information-boundary approval. | Sensitive or misleading status is exposed. |
-| ST-015 | Recover from recommendation or integration failure | When recommendation data or scheduling writes fail, the request returns to a manual path without appearing assigned. | Gated by Discovery | Failure semantics, retry, idempotency, alerts. | Scheduling and recommendation interfaces. | False assignment state or duplicate work. |
-| ST-016 | Record end-to-end decision history | Authorized reviewers can trace recommendation, evidence age, human action, override, assignment, and exception outcome. | Gated by Discovery | Event model, storage, access, retention. | ST-004. | The decision cannot be audited. |
+| ST-015 | Recover from recommendation or integration failure | When recommendation data or scheduling writes fail, the request returns to a manual path without appearing assigned. | Blocked | Failure semantics, retry, idempotency, alerts. | Scheduling and recommendation interfaces. | False assignment state or duplicate work. |
+| ST-016 | Record end-to-end decision history | Authorized reviewers can trace recommendation, evidence age, human action, override, assignment, and exception outcome. | Blocked | Event model, storage, access, retention. | ST-004. | The decision cannot be audited. |
 
 ## 7. Delivery Sequence
 
