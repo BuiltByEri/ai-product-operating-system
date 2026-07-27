@@ -1,4 +1,4 @@
-# Stage 1: Decision-Changing Discovery Questions
+# Stage 1: Discovery Summary
 
 This artifact is fictional and demonstrates AAPOS Product Discovery. It does not recommend a solution.
 
@@ -62,7 +62,7 @@ Together they establish the actual bottleneck, the non-negotiable human-control 
 | Which work needs human approval? | Safety-sensitive and after-hours requests require supervisor approval. Standard daytime requests may be eligible for recommendation support if required inputs are complete. | High | Human approval is a mandatory control. Autonomous dispatch is excluded from the first release. |
 | Is the data reliable enough? | Shift availability is current, certification data is nightly, and technician location is optional. | High | Recommendations cannot claim real-time eligibility. Data freshness must be visible and certification validation is an Engineering gate. |
 | What is the fallback? | Operations requires every unresolved request to return to a named queue with a visible reason and owner. | High | Exception handling and auditability become MVP capabilities, not operational afterthoughts. |
-| What drives the deadline? | The four-week date supports internal peak planning. No customer contract requires production delivery by that date. | High | Urgency remains near-term, but the recommended commitment can be a direction and bounded discovery rather than delivery. |
+| What drives the deadline? | The four-week date supports internal peak planning. No customer contract requires production delivery by that date. | High | Urgency remains near-term, but the recommended commitment is a direction on whether to begin bounded discovery, not a commitment to its duration or to delivery. |
 
 ## Known Facts After Clarification
 
@@ -83,7 +83,7 @@ Together they establish the actual bottleneck, the non-negotiable human-control 
 
 ## Discovery Gate
 
-**Human decision:** Continue to Product Recommendation with constraints.
+**Human decision:** Approved With Notes.
 
 **Approved direction for the next stage:** Compare intake completeness, governed dispatcher recommendations, status visibility, and autonomous assignment using VUED Risk. Do not assume AI assignment is the preferred solution.
 
@@ -92,7 +92,7 @@ Together they establish the actual bottleneck, the non-negotiable human-control 
 ```text
 Drafted with AI assistance: Yes
 Human decision owner: Fictional Product Owner
-Gate decision: Continue With Constraints
+Gate decision: Approved With Notes
 Human review status: Demonstrated for fictional example
 Open assumptions: Baselines, certification freshness, dispatcher explanation needs
 Open risks: Automating the wrong bottleneck; stale data influencing assignments
