@@ -55,53 +55,53 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 | Discovery ID | Related Epic | Related Stories | Question | Why It Matters | Owner | Status |
 |---|---|---|---|---|---|---|
-| DISC-001 | EPIC-001 | ST-001 | Which standard categories are recommendation-eligible and which remain protected? | Defines the safe MVP boundary. | Product, Operations, Safety | Ready for Discovery |
-| DISC-002 | EPIC-001 | ST-002 | What certification source and freshness threshold are acceptable? | Prevents stale eligibility evidence. | Engineering and Safety | Ready for Discovery |
-| DISC-003 | EPIC-001 | ST-003 | Which rationale and uncertainty cues support dispatcher judgment? | Reduces automation bias and unnecessary workflow burden. | Product and Operations | Ready for Discovery |
-| DISC-004 | EPIC-001 | ST-004 | Which events and baselines are required before rollout targets? | Prevents unsupported success claims. | Product and Engineering | Ready for Discovery |
-| DISC-005 | EPIC-002 | ST-005, ST-006, ST-007 | Which fields are required by category and which system owns each value? | Determines intake rules, reuse, and change governance. | Product and Engineering | Ready for Discovery |
-| DISC-006 | EPIC-003 | ST-010, ST-011 | How are dispatcher and supervisor roles enforced? | Makes human approval testable. | Engineering and Safety | Ready for Discovery |
-| DISC-007 | EPIC-003, EPIC-004 | ST-010, ST-015 | What confirms scheduling acceptance and how are failures recovered? | Prevents false or duplicate assignment state. | Engineering | Ready for Discovery |
-| DISC-008 | EPIC-004 | ST-013 | Which queue and team own each exception reason? | Prevents orphaned or duplicated work. | Operations | Ready for Discovery |
-| DISC-009 | EPIC-004 | ST-014 | Which internal states may be projected externally? | Protects privacy and status accuracy. | Product and Account Management | Ready for Discovery |
+| DISC-001 | EPIC-001 | ST-001 | Which standard categories are recommendation-eligible and which remain protected? | Defines the safe MVP boundary. Discovery has not started. | Product, Operations, Safety | Not Started |
+| DISC-002 | EPIC-001 | ST-002 | What certification source and freshness threshold are acceptable? | Prevents stale eligibility evidence. Discovery has not started. | Engineering and Safety | Not Started |
+| DISC-003 | EPIC-001 | ST-003 | Which rationale and uncertainty cues support dispatcher judgment? | Reduces automation bias and unnecessary workflow burden. Discovery has not started. | Product and Operations | Not Started |
+| DISC-004 | EPIC-001 | ST-004 | Which events and baselines are required before rollout targets? | Prevents unsupported success claims. Discovery has not started. | Product and Engineering | Not Started |
+| DISC-005 | EPIC-002 | ST-005, ST-006, ST-007 | Which fields are required by category and which system owns each value? | Determines intake rules, reuse, and change governance. Discovery has not started. | Product and Engineering | Not Started |
+| DISC-006 | EPIC-003 | ST-010, ST-011 | How are dispatcher and supervisor roles enforced? | Makes human approval testable. Discovery has not started. | Engineering and Safety | Not Started |
+| DISC-007 | EPIC-003, EPIC-004 | ST-010, ST-015 | What confirms scheduling acceptance and how are failures recovered? | Prevents false or duplicate assignment state. Discovery has not started. | Engineering | Not Started |
+| DISC-008 | EPIC-004 | ST-013 | Which queue and team own each exception reason? | Prevents orphaned or duplicated work. Discovery has not started. | Operations | Not Started |
+| DISC-009 | EPIC-004 | ST-014 | Which internal states may be projected externally? | Protects privacy and status accuracy. Discovery has not started. | Product and Account Management | Not Started |
 
 ## 6. Dependencies Tab
 
 | Dependency ID | Related Epic | Type | Description | Why It Matters | Owner | Status |
 |---|---|---|---|---|---|---|
-| DEP-001 | EPIC-001, EPIC-003 | Policy | Approved eligible and protected categories | Determines where recommendation support may operate. | Product and Safety | Required |
-| DEP-002 | EPIC-001, EPIC-003 | Data | Certification source and freshness behavior | Determines whether eligibility evidence is decision-ready. | Engineering and Safety | Required |
-| DEP-003 | EPIC-002 | System | Portal validation capability | Determines guided-intake feasibility. | Engineering | Required |
-| DEP-004 | EPIC-003, EPIC-004 | System | Scheduling read, write, and confirmation behavior | Preserves authoritative assignment state. | Engineering | Required |
-| DEP-005 | EPIC-003 | Access Control | Dispatcher and supervisor role model | Enforces human accountability and protected-work approval. | Engineering and Safety | Required |
-| DEP-006 | EPIC-004 | Operations | Named exception owner and queue platform | Prevents unresolved work from becoming orphaned. | Operations | Required |
-| DEP-007 | EPIC-004 | Information Governance | Approved internal-to-external status mapping | Protects restricted details and status accuracy. | Product and Account Management | Required |
-| DEP-008 | All | Measurement and Audit | Approved event, baseline, access, and retention definitions | Supports governance and later outcome evaluation. | Product and Engineering | Required |
+| DEP-001 | EPIC-001, EPIC-003 | Policy | Approved eligible and protected categories | Determines where recommendation support may operate; validation has not started. | Product and Safety | Not Started |
+| DEP-002 | EPIC-001, EPIC-003 | Data | Certification source and freshness behavior | Determines whether eligibility evidence is decision-ready; validation has not started. | Engineering and Safety | Not Started |
+| DEP-003 | EPIC-002 | System | Portal validation capability | Determines guided-intake feasibility; validation has not started. | Engineering | Not Started |
+| DEP-004 | EPIC-003, EPIC-004 | System | Scheduling read, write, and confirmation behavior | Preserves authoritative assignment state; validation has not started. | Engineering | Not Started |
+| DEP-005 | EPIC-003 | Access Control | Dispatcher and supervisor role model | Enforces human accountability and protected-work approval; validation has not started. | Engineering and Safety | Not Started |
+| DEP-006 | EPIC-004 | Operations | Named exception owner and queue platform | Prevents unresolved work from becoming orphaned; validation has not started. | Operations | Not Started |
+| DEP-007 | EPIC-004 | Information Governance | Approved internal-to-external status mapping | Protects restricted details and status accuracy; validation has not started. | Product and Account Management | Not Started |
+| DEP-008 | All | Measurement and Audit | Approved event, baseline, access, and retention definitions | Supports governance and later outcome evaluation; validation has not started. | Product and Engineering | Not Started |
 
 ## 7. Risks Tab
 
 | Risk ID | Related Epic | Risk | Impact | Likelihood | Mitigation or Response | Human Owner | Status |
 |---|---|---|---|---|---|---|---|
-| RISK-001 | EPIC-001, EPIC-003 | Nightly certification data may be too stale for decision-ready recommendations. | High | Medium-High | Define freshness gates and manual fallback before refinement. | Engineering and Safety | Open |
-| RISK-002 | EPIC-003 | Recommendation presentation creates automation bias. | High | Medium | Show rationale, freshness, uncertainty, and require explicit human action. | Product and Operations | Open |
-| RISK-003 | EPIC-003 | Protected work bypasses supervisor approval. | High | Low-Medium | Treat category and role checks as hard release gates. | Safety | Open |
-| RISK-004 | EPIC-004 | Failed scheduling work appears as a completed assignment. | High | Medium | Separate recommendation, approval, and confirmed assignment states. | Engineering | Open |
-| RISK-005 | EPIC-004 | Unresolved work becomes orphaned or duplicated. | Medium-High | Medium | Approve one recovery owner, idempotent routing, and queue observability. | Operations | Open |
-| RISK-006 | EPIC-002 | Required intake fields increase abandonment or delay urgent work. | Medium | Medium | Test category-specific fields and define an approved urgent path. | Product and Operations | Open |
-| RISK-007 | EPIC-004 | External status exposes restricted details or overpromises completion. | Medium-High | Low-Medium | Use an approved external projection with privacy review. | Product | Open |
-| RISK-008 | All | Four-week planning pressure becomes an unsupported delivery promise. | Medium | Medium | Communicate decision, discovery, and delivery commitments separately. | Product Owner and Leadership | Open |
-| RISK-009 | Deferred Scope | Early evidence is used to justify autonomous assignment prematurely. | Medium-High | Medium | Require a new Product Discovery and approval cycle for expansion. | Product Owner | Open |
+| RISK-001 | EPIC-001, EPIC-003 | Nightly certification data may be too stale for decision-ready recommendations. | High | Medium-High | Define freshness gates and manual fallback before refinement; mitigation remains active. | Engineering and Safety | In Progress |
+| RISK-002 | EPIC-003 | Recommendation presentation creates automation bias. | High | Medium | Show rationale, freshness, uncertainty, and require explicit human action; mitigation remains active. | Product and Operations | In Progress |
+| RISK-003 | EPIC-003 | Protected work bypasses supervisor approval. | High | Low-Medium | Treat category and role checks as hard release gates; mitigation remains active. | Safety | In Progress |
+| RISK-004 | EPIC-004 | Failed scheduling work appears as a completed assignment. | High | Medium | Separate recommendation, approval, and confirmed assignment states; mitigation remains active. | Engineering | In Progress |
+| RISK-005 | EPIC-004 | Unresolved work becomes orphaned or duplicated. | Medium-High | Medium | Approve one recovery owner, idempotent routing, and queue observability; mitigation remains active. | Operations | In Progress |
+| RISK-006 | EPIC-002 | Required intake fields increase abandonment or delay urgent work. | Medium | Medium | Test category-specific fields and define an approved urgent path; mitigation remains active. | Product and Operations | In Progress |
+| RISK-007 | EPIC-004 | External status exposes restricted details or overpromises completion. | Medium-High | Low-Medium | Use an approved external projection with privacy review; mitigation remains active. | Product | In Progress |
+| RISK-008 | All | Four-week planning pressure becomes an unsupported delivery promise. | Medium | Medium | Communicate decision, discovery, and delivery commitments separately; mitigation remains active. | Product Owner and Leadership | In Progress |
+| RISK-009 | Deferred Scope | Early evidence is used to justify autonomous assignment prematurely. | Medium-High | Medium | Require a new Product Discovery and approval cycle for expansion; mitigation remains active. | Product Owner | In Progress |
 
 ## 8. Assumptions Tab
 
 | Assumption ID | Related Epic | Assumption | Validation Approach | Status |
 |---|---|---|---|---|
-| ASM-001 | EPIC-002 | Selected categories can use stable required-field sets. | Category and workflow review. | Unvalidated |
-| ASM-002 | EPIC-003 | Current availability can be read without changing scheduling ownership. | Interface discovery. | Unvalidated |
-| ASM-003 | EPIC-003 | Certification freshness can be improved or safely gated. | Data-source and synchronization review. | Unvalidated |
-| ASM-004 | EPIC-003 | Dispatchers can evaluate recommendations without increased burden. | Dispatcher workflow testing. | Unvalidated |
-| ASM-005 | EPIC-004 | One operational queue can own unresolved recommendation cases. | Operations process review. | Unvalidated |
-| ASM-006 | All | Leadership can provide direction within four weeks without committing the duration of subsequent work. | Leadership planning confirmation. | Validated for Product direction |
+| ASM-001 | EPIC-002 | Selected categories can use stable required-field sets. | Category and workflow review has not started. | Not Started |
+| ASM-002 | EPIC-003 | Current availability can be read without changing scheduling ownership. | Interface discovery has not started. | Not Started |
+| ASM-003 | EPIC-003 | Certification freshness can be improved or safely gated. | Data-source and synchronization review has not started. | Not Started |
+| ASM-004 | EPIC-003 | Dispatchers can evaluate recommendations without increased burden. | Dispatcher workflow testing has not started. | Not Started |
+| ASM-005 | EPIC-004 | One operational queue can own unresolved recommendation cases. | Operations process review has not started. | Not Started |
+| ASM-006 | All | Leadership can provide direction within four weeks without committing the duration of subsequent work. | Leadership planning confirmation completed for Product direction. | Completed |
 
 ## 9. Deferred Work Tab
 
@@ -119,15 +119,15 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 | Open Question ID | Related Epic | Related Story | Question | Decision Affected | Status |
 |---|---|---|---|---|---|
-| OQ-001 | EPIC-001 | ST-001 | Which exact categories are recommendation-eligible? | MVP boundary | Needs Discovery |
-| OQ-002 | EPIC-001 | ST-002 | What evidence-freshness threshold is acceptable? | Recommendation availability and safety | Needs Discovery |
-| OQ-003 | EPIC-001 | ST-003 | Which rationale and uncertainty cues do dispatchers require? | Recommendation presentation | Needs Discovery |
-| OQ-004 | EPIC-002 | ST-005 | Which fields are required by category and who owns them? | Intake rules and governance | Needs Discovery |
-| OQ-005 | EPIC-003 | ST-010, ST-011 | How are dispatcher and supervisor roles represented? | Human approval enforcement | Needs Discovery |
-| OQ-006 | EPIC-003, EPIC-004 | ST-010, ST-015 | What confirms scheduling acceptance? | Assignment state and recovery | Needs Discovery |
-| OQ-007 | EPIC-004 | ST-013 | Which queue owns each exception reason? | Operational recovery | Needs Discovery |
-| OQ-008 | EPIC-004 | ST-014 | Which internal states may be shown externally? | Customer-safe status | Needs Discovery |
-| OQ-009 | All | ST-004 | Which baselines and observation period support a later decision? | Success targets and rollout review | Needs Discovery |
+| OQ-001 | EPIC-001 | ST-001 | Which exact categories are recommendation-eligible? | MVP boundary; discovery has not started. | Not Started |
+| OQ-002 | EPIC-001 | ST-002 | What evidence-freshness threshold is acceptable? | Recommendation availability and safety; discovery has not started. | Not Started |
+| OQ-003 | EPIC-001 | ST-003 | Which rationale and uncertainty cues do dispatchers require? | Recommendation presentation; discovery has not started. | Not Started |
+| OQ-004 | EPIC-002 | ST-005 | Which fields are required by category and who owns them? | Intake rules and governance; discovery has not started. | Not Started |
+| OQ-005 | EPIC-003 | ST-010, ST-011 | How are dispatcher and supervisor roles represented? | Human approval enforcement; discovery has not started. | Not Started |
+| OQ-006 | EPIC-003, EPIC-004 | ST-010, ST-015 | What confirms scheduling acceptance? | Assignment state and recovery; discovery has not started. | Not Started |
+| OQ-007 | EPIC-004 | ST-013 | Which queue owns each exception reason? | Operational recovery; discovery has not started. | Not Started |
+| OQ-008 | EPIC-004 | ST-014 | Which internal states may be shown externally? | Customer-safe status; discovery has not started. | Not Started |
+| OQ-009 | All | ST-004 | Which baselines and observation period support a later decision? | Success targets and rollout review; discovery has not started. | Not Started |
 
 ## 11. Readiness Tab
 

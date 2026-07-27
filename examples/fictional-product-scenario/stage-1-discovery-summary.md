@@ -22,11 +22,11 @@ These are early signals from the ambiguous intake, recorded before the fictional
 
 | Lens | Initial Signal | Notes |
 |---|---|---|
-| Value | Potentially High, unvalidated | Faster dispatch could improve operational flow and customer visibility, but the intake does not establish which delay is most valuable to solve. |
-| Urgency | Near-Term decision pressure | Leadership wants direction within four weeks. The date supports prioritization of discovery and a decision, not a delivery promise. |
-| Effort | High or Unknown | The proposed automation may require eligibility logic, current technician evidence, approval controls, scheduling integration, failure recovery, and auditability. Engineering discovery is required. |
+| Value | High | Faster dispatch could improve operational flow and customer visibility, but the value is unvalidated because the intake does not establish which delay is most valuable to solve. |
+| Urgency | Near-Term | Leadership wants direction within four weeks. The date creates decision pressure, not a delivery promise. |
+| Effort | Unknown | The proposed automation has potentially high effort across eligibility logic, current technician evidence, approval controls, scheduling integration, failure recovery, and auditability. Engineering discovery is required before rating it more precisely. |
 | Dependencies | High | The concept depends on reliable availability and certification data, approved service-category rules, dispatcher and supervisor roles, scheduling-system behavior, and named exception ownership. |
-| Risk | High uncertainty on both paths | Acting too quickly could automate the wrong bottleneck or present unsafe recommendations. Not acting could preserve clarification work, fragmented decisions, and poor status visibility. |
+| Risk | High | Uncertainty remains high. Acting too quickly could automate the wrong bottleneck or present unsafe recommendations. Not acting could preserve clarification work, fragmented decisions, and poor status visibility. |
 
 The initial signals show why the request is important and why it is not ready for prioritization or scope commitment. The clarifying questions below are designed to change these signals with evidence.
 
