@@ -44,8 +44,10 @@ Status answers where the work is. Decision records what the accountable human ju
 
 ## Gate 1: Discovery Review
 
-**Gate ID:** `gate.product-discovery.discovery-review`  
-**Accountable authority:** Product Owner  
+**Gate ID:** `gate.product-discovery.discovery-review`
+
+**Accountable authority:** Product Owner
+
 **Artifact reviewed:** Discovery Summary
 
 ### Review Purpose
@@ -98,8 +100,10 @@ Record the evidence reviewed, questions retained or removed, required stakeholde
 
 ## Gate 2: Product Approval
 
-**Gate ID:** `gate.product-recommendation.product-approval`  
-**Accountable authority:** Product Owner  
+**Gate ID:** `gate.product-recommendation.product-approval`
+
+**Accountable authority:** Product Owner
+
 **Artifact reviewed:** Product Recommendation
 
 ### Review Purpose
@@ -153,8 +157,10 @@ Record the evidence reviewed, Product decision rationale, approved boundaries, a
 
 ## Gate 3: Engineering Review
 
-**Gate ID:** `gate.engineering-planning.engineering-review`  
-**Accountable authority:** Engineering and Product Owner  
+**Gate ID:** `gate.engineering-planning.engineering-review`
+
+**Accountable authority:** Engineering and Product Owner
+
 **Artifacts reviewed:** Engineering Refinement Package and Engineering Refinement Workbook Map
 
 ### Review Purpose
@@ -220,8 +226,10 @@ Record the Product and Engineering evidence reviewed, scope-integrity result, fe
 
 ## Gate 4: Final Approval
 
-**Gate ID:** `gate.executive-communication.final-approval`  
-**Accountable authority:** Product Owner  
+**Gate ID:** `gate.executive-communication.final-approval`
+
+**Accountable authority:** Product Owner
+
 **Artifact reviewed:** Engineering Readiness Review
 
 ### Review Purpose
