@@ -88,7 +88,7 @@ No AI-generated output automatically becomes a decision, requirement, backlog it
 
 The Product Owner remains accountable for discovery quality, prioritization, scope, tradeoffs, stakeholder alignment, Engineering readiness, final communication, and the outcome.
 
-See [`docs/HUMAN_GOVERNANCE.md`](docs/HUMAN_GOVERNANCE.md) and [`core/AAPOS_GOVERNANCE_MODEL.md`](core/AAPOS_GOVERNANCE_MODEL.md).
+See [`docs/HUMAN_GOVERNANCE.md`](docs/HUMAN_GOVERNANCE.md), the stage-specific [`Human Gate Review Guide`](docs/HUMAN_GATE_REVIEW_GUIDE.md), and [`core/AAPOS_GOVERNANCE_MODEL.md`](core/AAPOS_GOVERNANCE_MODEL.md).
 
 ## Core Concepts
 
@@ -143,6 +143,8 @@ tests/                Validation notes
 Validation scripts live in [`scripts/`](scripts/).
 
 - `npm run validate:skills` checks expected skill files, metadata, lifecycle routing, artifact ownership, human gates, required sections, and unsupported AI decision ownership.
+- `npm run validate:governance` checks the four-stage human gate review standard, skill checklists, approval-record review fields, and cross-file links to the review guide.
+- `npm run validate:examples` checks exact workbook column contracts, allowed lifecycle statuses, and Stage 3/Stage 4 readiness alignment in the fictional example.
 - `npm run validate:links` checks local Markdown file links. It skips anchors, external URLs, generated files, and semantic correctness.
 - `npm run validate:safety` checks known publication-risk terms, local machine paths, non-public repository references, and secret-like assignments. It reduces risk but cannot guarantee confidentiality.
 - `npm run validate:version` checks version consistency across the repository.

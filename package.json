@@ -11,8 +11,10 @@
   },
   "scripts": {
     "test": "npm run validate",
-    "validate": "npm run validate:skills && npm run validate:links && npm run validate:safety && npm run validate:version",
+    "validate": "npm run validate:skills && npm run validate:governance && npm run validate:examples && npm run validate:links && npm run validate:safety && npm run validate:version",
     "validate:skills": "node scripts/validate-skills.mjs",
+    "validate:governance": "node scripts/validate-governance.mjs",
+    "validate:examples": "node scripts/validate-examples.mjs",
     "validate:links": "node scripts/validate-links.mjs",
     "validate:safety": "node scripts/scan-forbidden-terms.mjs",
     "validate:version": "node scripts/validate-version.mjs"
