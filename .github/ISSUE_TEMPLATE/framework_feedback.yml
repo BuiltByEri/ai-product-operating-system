@@ -1,0 +1,34 @@
+name: Framework Feedback
+description: Suggest an AAPOS framework improvement or future-version idea.
+title: "[Framework]: "
+labels:
+  - framework
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: Describe the proposed improvement.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Framework Area
+      options:
+        - Product Discovery
+        - Product Recommendation
+        - Engineering Planning
+        - Executive Communication
+        - Human Governance
+        - VUED + Risk
+        - Validation
+    validations:
+      required: true
+  - type: checkboxes
+    id: lifecycle
+    attributes:
+      label: Lifecycle Impact
+      options:
+        - label: This proposal does not assume a lifecycle change for AAPOS v1.0.0.
+          required: true

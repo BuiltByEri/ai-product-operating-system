@@ -33,27 +33,27 @@ Describe the recommended path and why it is the best next Product decision.
 
 ## MVP Scope
 
-- 
+- TBD
 
 ## Out of Scope
 
-- 
+- TBD
 
 ## Immediate Mitigation
 
-- 
+- TBD
 
 ## Engineering Discovery
 
-- 
+- TBD
 
 ## Full Solution Direction
 
-- 
+- TBD
 
 ## Tradeoffs
 
-- 
+- TBD
 
 ## Success Measures
 
@@ -61,11 +61,11 @@ Define success measures without inventing baselines or outcomes.
 
 ## Dependencies
 
-- 
+- TBD
 
 ## Deferred Work
 
-- 
+- TBD
 
 ## Product Approval
 

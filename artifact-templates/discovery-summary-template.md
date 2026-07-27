@@ -19,11 +19,11 @@ Describe what appears to be happening, who is affected, and why it matters.
 
 ## Known Facts
 
-- 
+- TBD
 
 ## Assumptions
 
-- 
+- TBD
 
 ## Initial VUED + Risk Signals
 
@@ -43,13 +43,13 @@ Describe what appears to be happening, who is affected, and why it matters.
 
 ## Top Three Questions
 
-1. 
-2. 
-3. 
+1. TBD
+2. TBD
+3. TBD
 
 ## Information Gaps
 
-- 
+- TBD
 
 ## Human Review Metadata
 

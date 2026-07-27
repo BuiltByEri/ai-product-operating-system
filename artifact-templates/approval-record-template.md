@@ -30,15 +30,15 @@ Record owner:
 
 ## Open Assumptions
 
-- 
+- TBD
 
 ## Open Risks
 
-- 
+- TBD
 
 ## Deferred Decisions
 
-- 
+- TBD
 
 ## Final Notes
 

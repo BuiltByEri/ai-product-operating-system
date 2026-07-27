@@ -30,7 +30,7 @@ Summarize the approved Product Intent and how Engineering planning preserves it.
 
 ## Epic Details
 
-### Epic: 
+### Epic: TBD
 
 Business goal:
 
@@ -54,7 +54,7 @@ Refinement status:
 
 ## Story Details
 
-### Story: 
+### Story: TBD
 
 User story:
 
@@ -70,11 +70,11 @@ Refinement status:
 
 ## Engineering Discovery
 
-- 
+- TBD
 
 ## Deferred Backlog
 
-- 
+- TBD
 
 ## Risk Register
 
