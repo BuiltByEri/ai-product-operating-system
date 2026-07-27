@@ -39,6 +39,8 @@ No additional stages are part of AAPOS v1.0.0.
 | `gate.engineering-planning.engineering-review` | Engineering Planning | Engineering validates feasibility, dependencies, sequencing, and technical risk while Product confirms scope integrity. |
 | `gate.executive-communication.final-approval` | Executive Communication | Product Owner approves the final recommendation, confidence statement, and decision request. |
 
+Each gate requires the accountable human to inspect the evidence, challenge the reasoning, select a decision, and record the decision boundary. The required review criteria, return conditions, and permitted next actions are defined in the [`Human Gate Review Guide`](../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
 ## VUED Risk
 
 Product Discovery and Product Recommendation use VUED Risk:

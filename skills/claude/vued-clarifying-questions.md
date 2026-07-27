@@ -59,7 +59,29 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/VUED_RISK_FRAMEWOR
 
 ## 6. Human Gate
 
-The Product Owner reviews the Discovery Summary, removes low-value questions, confirms assumptions, and decides what must be answered before Product Recommendation.
+The Product Owner applies the Discovery Review criteria in the [`Human Gate Review Guide`](../../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
+### Human Review Checklist
+
+- Confirm the problem is separated from the proposed solution.
+- Distinguish source-backed facts, stakeholder claims, assumptions, inferences, unknowns, dependencies, and risks.
+- Verify initial Value, Urgency, Effort, Dependencies, and Risk signals use defined rating scales and explain uncertainty.
+- Retain no more than five questions, each capable of changing priority, scope, MVP, sequencing, feasibility, or risk response.
+- Identify the three highest-leverage questions when stakeholder access or time is limited.
+- Confirm information gaps and high-risk unknowns have an owner or escalation path.
+- Verify the artifact does not recommend final scope or imply downstream commitment.
+
+### Return or Block When
+
+Return or block the artifact when the problem remains solution-led, facts and assumptions are mixed, questions are not decision-changing, material evidence or risks are missing, or a high-risk unknown lacks an owner.
+
+### Decision Boundary
+
+Approval permits Product Recommendation using the reviewed evidence and explicit assumptions. Approval does not permit final priority, MVP commitment, Engineering planning, estimates, budget, or implementation.
+
+### Record
+
+Record the evidence reviewed, questions retained or removed, stakeholder answers required, accepted assumptions, open risks, conditions, remaining blockers, and next action permitted.
 
 ## 7. Outputs
 

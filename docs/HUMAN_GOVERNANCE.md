@@ -15,6 +15,19 @@ No AI-generated output automatically becomes:
 
 Every stage ends with a human review or approval gate.
 
+## Human Review Standard
+
+At every gate, the accountable human must:
+
+1. **Inspect** the artifact, evidence, assumptions, risks, boundaries, and traceability.
+2. **Challenge** unsupported claims, hidden uncertainty, scope drift, and AI-assisted inference.
+3. **Decide** using an approved AAPOS decision value and explicit conditions.
+4. **Record** the evidence reviewed, rationale, blockers, and next action permitted.
+
+The reviewer is not approving the quality of the writing. The reviewer is determining whether the evidence justifies the next commitment.
+
+See the [`Human Gate Review Guide`](HUMAN_GATE_REVIEW_GUIDE.md) for the inspection criteria, challenge questions, return conditions, and decision boundary at each stage.
+
 ## Review Gates
 
 ### Discovery Review
@@ -25,6 +38,9 @@ The Product Owner confirms:
 - assumptions are visible
 - questions are decision-changing
 - risks and information gaps are explicit
+- initial VUED Risk signals use defined rating scales
+- blocking gaps and high-risk unknowns have owners
+- approval is limited to Product Recommendation
 
 ### Product Approval
 
@@ -36,6 +52,9 @@ The Product Owner approves:
 - out-of-scope boundaries
 - tradeoffs
 - success measures
+- evidence and decision rationale
+- human-control and return-decision boundaries
+- the absence of invented Engineering or delivery commitments
 
 ### Engineering Validation
 
@@ -46,8 +65,10 @@ Engineering validates:
 - technical assumptions
 - sequencing
 - platform and delivery risk
+- business rules, failure behavior, and recovery
+- open Engineering questions and discovery blockers
 
-Product validates that Engineering planning has not changed Product intent.
+Product validates that Engineering planning has not changed Product intent, expanded MVP scope, introduced deferred work, or created conflicts between the package and Workbook Map.
 
 ### Final Approval
 
@@ -58,6 +79,9 @@ The Product Owner reviews and approves:
 - confidence statements
 - decision request
 - final communication
+- honest confidence and uncertainty language
+- separation between Product Owner approval and the audience's later business decision
+- absence of confidential or unsupported claims
 
 ## Human Authorship and Accountability
 
@@ -82,6 +106,8 @@ The Product Owner is responsible for:
 - Preserve traceability between Product intent and Engineering work.
 - Escalate unresolved high-risk questions to the appropriate human owner.
 - Require human approval before moving to the next stage.
+- State what each approval permits and does not permit.
+- Return or block an artifact when the required evidence is missing.
 
 ## Recommended Artifact Metadata
 
@@ -90,6 +116,12 @@ Drafted with AI assistance:
 Human reviewed:
 Approved by:
 Approval date:
+Decision rationale:
+Evidence reviewed:
+Conditions:
+Return reason:
+Remaining blockers:
+Next action permitted:
 Open assumptions:
 Open risks:
 ```

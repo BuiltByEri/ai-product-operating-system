@@ -63,7 +63,30 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/VUED_RISK_FRAMEWOR
 
 ## 6. Human Gate
 
-The Product Owner approves Product Intent, priority, MVP scope, out-of-scope boundaries, assumptions, success measures, and accepted tradeoffs before Engineering planning begins.
+The Product Owner applies the Product Approval criteria in the [`Human Gate Review Guide`](../../docs/HUMAN_GATE_REVIEW_GUIDE.md).
+
+### Human Review Checklist
+
+- Confirm Product Intent and priority trace to the reviewed Discovery Summary and stakeholder evidence.
+- Verify VUED Risk ratings and reasoning support the proposed sequence without false precision.
+- Separate immediate mitigation, Engineering discovery, MVP, and full-solution work.
+- Confirm MVP scope, out-of-scope boundaries, accepted tradeoffs, and deferred work are explicit.
+- Verify assumptions, dependencies, risks, and confidence remain visible.
+- Confirm success measures are observable and do not invent baselines, targets, or outcomes.
+- Preserve human ownership, approval controls, and return decisions.
+- Reject invented Engineering estimates, architecture, capacity, dates, or implementation commitments.
+
+### Return or Block When
+
+Return or block the artifact when Product Intent does not trace to discovery, VUED Risk reasoning is unsupported, scope categories are blended, tradeoffs are hidden, material risks lack owners, or the recommendation contains unauthorized delivery commitments.
+
+### Decision Boundary
+
+Approval permits Engineering Planning to translate the locked Product Intent, priority, MVP scope, exclusions, tradeoffs, assumptions, and success measures. Approval does not authorize architecture, estimates, budget, capacity, delivery dates, or implementation.
+
+### Record
+
+Record the evidence reviewed, Product decision rationale, approved boundaries, accepted tradeoffs, conditions, remaining blockers, deferred decisions, and next action permitted.
 
 ## 7. Outputs
 

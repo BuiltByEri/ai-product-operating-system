@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Added stage-specific human gate inspection criteria, challenge questions, return conditions, decision boundaries, and approval-record evidence guidance.
+- Expanded all four reference skills with accountable human review checklists.
+- Added governance validation for the Human Gate Review Guide, skill contracts, schema fields, and fictional approval example.
+- Corrected fictional workbook column contracts and synchronized Stage 3 and Stage 4 readiness statuses.
+- Added example validation to prevent workbook-header and readiness-status drift.
+
 ## 1.0.0
 
 - Established the public AAPOS release package.
