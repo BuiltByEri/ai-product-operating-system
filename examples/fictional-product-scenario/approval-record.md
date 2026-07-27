@@ -10,17 +10,26 @@ Scenario type: Entirely fictional public example
 AAPOS version: 1.0.0
 Drafted with AI assistance: Yes
 Record owner: Fictional Product Owner
-Example date: 2026-07-27
 ```
 
 ## Gate Outcomes
 
-| Gate ID | Gate Name | Artifact Reviewed | Human Decision | Accountable Reviewer | Decision Effect |
-|---|---|---|---|---|---|
-| `gate.product-discovery.discovery-review` | Discovery Review | Decision-Changing Discovery Questions | Continue With Constraints | Fictional Product Owner | Allows VUED Risk analysis of competing options; does not approve a solution. |
-| `gate.product-recommendation.product-approval` | Product Approval | Product Recommendation | Approved With Notes | Fictional Product Owner | Locks guided intake and accountable exceptions first, with human-approved recommendation support conditional on discovery. |
-| `gate.engineering-planning.engineering-review` | Engineering Review | Canonical Engineering Refinement Package | Approved With Notes | Fictional Product Owner and Fictional Engineering Lead | Confirms Product intent was preserved and allows workbook generation and executive communication; does not authorize implementation. |
-| `gate.executive-communication.final-approval` | Leadership Decision | Engineering Readiness Review | Approved With Notes | Fictional Executive Sponsor | Authorizes bounded Engineering discovery and conditional refinement. Requires a return decision before implementation commitment. |
+| Gate ID | Gate Name | Artifact Reviewed | Human Decision | Accountable Reviewer | Date | Decision Effect |
+|---|---|---|---|---|---|---|
+| `gate.product-discovery.discovery-review` | Discovery Review | [`Discovery Summary`](stage-1-discovery-summary.md) | Approved With Notes | Fictional Product Owner | 2026-07-21 | Approves progression to Product Recommendation with baselines, certification freshness, and dispatcher explanation needs retained as explicit constraints. It does not approve a solution. |
+| `gate.product-recommendation.product-approval` | Product Approval | [`Approved Product Recommendation`](stage-2-product-recommendation.md) | Approved With Notes | Fictional Product Owner | 2026-07-23 | Locks guided intake and accountable exceptions first, with human-approved recommendation support conditional on discovery. |
+| `gate.engineering-planning.engineering-review` | Engineering Review | [`Canonical Engineering Refinement Package`](stage-3-engineering-refinement-summary.md) and [`Engineering Refinement Workbook Map`](stage-3-engineering-refinement-workbook-map.md) | Approved With Notes | Fictional Product Owner and Fictional Engineering Lead | 2026-07-25 | Confirms both required Stage 3 artifacts exist, are mutually traceable, and preserve Product intent. Allows Executive Communication but does not authorize implementation. |
+| `gate.executive-communication.final-approval` | Final Approval | [`Engineering Readiness Review`](stage-4-engineering-readiness-review.md) | Approved With Notes | Fictional Product Owner | 2026-07-27 | Approves the recommendation, confidence language, open-risk framing, and leadership decision request for sharing. It does not record the subsequent leadership business decision. |
+
+## Leadership Decision Requested
+
+This is a business decision requested after the Product Owner's AAPOS final approval. It is not an AAPOS approval gate and does not reuse a framework gate ID.
+
+- **Decision owner:** Fictional Executive Sponsor
+- **Decision requested:** Provide leadership direction within four weeks on whether to proceed with bounded Engineering discovery and refinement.
+- **Current status:** Awaiting fictional leadership direction.
+- **Commitment boundary:** The duration, capacity, budget, and delivery timing for discovery, refinement, or implementation remain uncommitted.
+- **Return gate:** A separate human decision is required after Engineering discovery and before implementation commitment.
 
 ## Locked Human Decisions
 
@@ -53,7 +62,7 @@ Before implementation commitment, humans must review and approve:
 - Certification freshness can be improved or safely gated.
 - Dispatchers will find the consolidated evidence useful.
 - One operational queue can own unresolved work.
-- The four-week period is sufficient for direction and bounded discovery.
+- Leadership can provide direction within four weeks without committing the duration of bounded discovery, refinement, or delivery.
 
 ## Open Risks
 
