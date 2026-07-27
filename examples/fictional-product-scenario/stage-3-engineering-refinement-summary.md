@@ -1,6 +1,6 @@
 # Stage 3: Canonical Engineering Refinement Package
 
-This artifact is fictional and demonstrates AAPOS Engineering Planning. It translates the locked Product Recommendation into an Engineering decision package without changing Product priority or scope.
+This artifact is fictional and demonstrates AAPOS Engineering Planning. It translates the locked Product Recommendation into an Engineering decision package without changing Product priority or scope. Its structured companion is the [`Engineering Refinement Workbook Map`](stage-3-engineering-refinement-workbook-map.md).
 
 ## 1. Locked Product Recommendation
 
@@ -184,7 +184,7 @@ If the discovery gates pass, the conditional MVP will:
 
 | Phase | Epics Included | Objective | Entry Condition | Exit Decision |
 |---|---|---|---|---|
-| Phase 1: Four-week direction and discovery | EPIC-001 plus discovery for EPIC-002 and EPIC-004 | Confirm Product boundaries, data feasibility, human-control rules, audit needs, queue ownership, and baseline plan. | Locked Product Recommendation approved. | Proceed with conditional MVP refinement, narrow scope, extend discovery, or defer. |
+| Phase 1: Leadership direction, then bounded discovery | EPIC-001 plus discovery for EPIC-002 and EPIC-004 | Leadership provides direction within four weeks. If approved, Engineering then confirms Product boundaries, data feasibility, human-control rules, audit needs, queue ownership, and the baseline plan without a predetermined work duration. | Locked Product Recommendation approved and leadership direction recorded. | Proceed with conditional MVP refinement, narrow scope, extend discovery, or defer. |
 | Phase 2: Intake and operational control foundation | EPIC-002 and EPIC-004 foundation | Improve completeness, status, and accountable exception handling independent of recommendation availability. | Required fields, status taxonomy, and queue ownership approved. | Foundation ready for controlled use or returned for revision. |
 | Phase 3: Conditional recommendation workspace | EPIC-003 and remaining EPIC-004 controls | Introduce human-approved recommendations for eligible standard categories. | Data freshness, eligibility, explanations, audit, fallback, and scheduling behavior validated. | Controlled rollout approved, narrowed, or stopped. |
 | Phase 4: Evidence-based future decision | Deferred scope only | Evaluate whether broader categories or automation deserve a new Product decision. | Baselines and controlled-use evidence reviewed by humans. | Open a new Product Discovery cycle or retain current scope. |
@@ -329,7 +329,7 @@ If approved, rollout should begin with selected standard categories, named dispa
 | ASM-003 | EPIC-003 | Certification freshness can be improved or safely gated. | Data-source and synchronization review. | Unvalidated |
 | ASM-004 | EPIC-003 | Dispatchers can evaluate a recommendation without increasing decision burden. | Workflow testing with dispatchers. | Unvalidated |
 | ASM-005 | EPIC-004 | One operational queue can own all unresolved recommendation cases. | Operations process review. | Unvalidated |
-| ASM-006 | All | The four-week window is sufficient for direction and bounded discovery, not delivery. | Leadership planning confirmation. | Validated for Product direction |
+| ASM-006 | All | Leadership can provide direction within four weeks without committing the duration of bounded discovery, refinement, or delivery. | Leadership planning confirmation. | Validated for Product direction |
 
 ## 16. Decisions and Open Questions
 
@@ -396,9 +396,9 @@ The MVP may provide clearer status, but it does not approve faster-completion pr
 
 Recommendation evidence is used to support assignment decisions, not to create hidden worker rankings or performance scores.
 
-## 19. Workbook Generation Gate
+## 19. Workbook Handoff and Stage 3 Exit
 
-Generate or populate the Engineering Refinement Workbook only after a human confirms that this Canonical Engineering Refinement Package:
+The required [`Engineering Refinement Workbook Map`](stage-3-engineering-refinement-workbook-map.md) was produced from this approved package after human review confirmed that the package:
 
 - preserves the locked Product Recommendation;
 - keeps autonomous assignment out of scope;
@@ -406,4 +406,6 @@ Generate or populate the Engineering Refinement Workbook only after a human conf
 - separates known facts, assumptions, dependencies, and open questions; and
 - is an approved source of truth for structured planning.
 
-**Gate status in this fictional run:** Approved With Notes for workbook generation and executive communication. Implementation commitment remains blocked by the open discovery items.
+The package and workbook map represent the same Product boundary, epics, stories, discovery needs, dependencies, risks, assumptions, deferred work, and open Engineering questions at different levels of structure. Both trace to the [`Approved Product Recommendation`](stage-2-product-recommendation.md).
+
+**Stage 3 exit status in this fictional run:** Both required outputs exist and are traceable. Engineering Review is Approved With Notes for progression to Executive Communication. Implementation commitment remains blocked by the open discovery items, estimates, capacity, budget, and a required return decision.
