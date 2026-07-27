@@ -53,7 +53,7 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 ## 5. Engineering Discovery Tab
 
-| Discovery ID | Related Epic | Related Stories | Question | Why It Matters | Owner | Status |
+| Discovery ID | Related Epic ID | Related Story ID | Question | Why It Matters | Owner | Status |
 |---|---|---|---|---|---|---|
 | DISC-001 | EPIC-001 | ST-001 | Which standard categories are recommendation-eligible and which remain protected? | Defines the safe MVP boundary. Discovery has not started. | Product, Operations, Safety | Not Started |
 | DISC-002 | EPIC-001 | ST-002 | What certification source and freshness threshold are acceptable? | Prevents stale eligibility evidence. Discovery has not started. | Engineering and Safety | Not Started |
@@ -67,20 +67,20 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 ## 6. Dependencies Tab
 
-| Dependency ID | Related Epic | Type | Description | Why It Matters | Owner | Status |
+| Dependency ID | Related Epic ID | Type | Description | Owner | Status | Why It Matters |
 |---|---|---|---|---|---|---|
-| DEP-001 | EPIC-001, EPIC-003 | Policy | Approved eligible and protected categories | Determines where recommendation support may operate; validation has not started. | Product and Safety | Not Started |
-| DEP-002 | EPIC-001, EPIC-003 | Data | Certification source and freshness behavior | Determines whether eligibility evidence is decision-ready; validation has not started. | Engineering and Safety | Not Started |
-| DEP-003 | EPIC-002 | System | Portal validation capability | Determines guided-intake feasibility; validation has not started. | Engineering | Not Started |
-| DEP-004 | EPIC-003, EPIC-004 | System | Scheduling read, write, and confirmation behavior | Preserves authoritative assignment state; validation has not started. | Engineering | Not Started |
-| DEP-005 | EPIC-003 | Access Control | Dispatcher and supervisor role model | Enforces human accountability and protected-work approval; validation has not started. | Engineering and Safety | Not Started |
-| DEP-006 | EPIC-004 | Operations | Named exception owner and queue platform | Prevents unresolved work from becoming orphaned; validation has not started. | Operations | Not Started |
-| DEP-007 | EPIC-004 | Information Governance | Approved internal-to-external status mapping | Protects restricted details and status accuracy; validation has not started. | Product and Account Management | Not Started |
-| DEP-008 | All | Measurement and Audit | Approved event, baseline, access, and retention definitions | Supports governance and later outcome evaluation; validation has not started. | Product and Engineering | Not Started |
+| DEP-001 | EPIC-001, EPIC-003 | Policy | Approved eligible and protected categories | Product and Safety | Not Started | Determines where recommendation support may operate; validation has not started. |
+| DEP-002 | EPIC-001, EPIC-003 | Data | Certification source and freshness behavior | Engineering and Safety | Not Started | Determines whether eligibility evidence is decision-ready; validation has not started. |
+| DEP-003 | EPIC-002 | System | Portal validation capability | Engineering | Not Started | Determines guided-intake feasibility; validation has not started. |
+| DEP-004 | EPIC-003, EPIC-004 | System | Scheduling read, write, and confirmation behavior | Engineering | Not Started | Preserves authoritative assignment state; validation has not started. |
+| DEP-005 | EPIC-003 | Access Control | Dispatcher and supervisor role model | Engineering and Safety | Not Started | Enforces human accountability and protected-work approval; validation has not started. |
+| DEP-006 | EPIC-004 | Operations | Named exception owner and queue platform | Operations | Not Started | Prevents unresolved work from becoming orphaned; validation has not started. |
+| DEP-007 | EPIC-004 | Information Governance | Approved internal-to-external status mapping | Product and Account Management | Not Started | Protects restricted details and status accuracy; validation has not started. |
+| DEP-008 | All | Measurement and Audit | Approved event, baseline, access, and retention definitions | Product and Engineering | Not Started | Supports governance and later outcome evaluation; validation has not started. |
 
 ## 7. Risks Tab
 
-| Risk ID | Related Epic | Risk | Impact | Likelihood | Mitigation or Response | Human Owner | Status |
+| Risk ID | Related Epic ID | Risk | Impact | Likelihood | Mitigation | Owner | Status |
 |---|---|---|---|---|---|---|---|
 | RISK-001 | EPIC-001, EPIC-003 | Nightly certification data may be too stale for decision-ready recommendations. | High | Medium-High | Define freshness gates and manual fallback before refinement; mitigation remains active. | Engineering and Safety | In Progress |
 | RISK-002 | EPIC-003 | Recommendation presentation creates automation bias. | High | Medium | Show rationale, freshness, uncertainty, and require explicit human action; mitigation remains active. | Product and Operations | In Progress |
@@ -105,7 +105,7 @@ It maps the same approved work represented in the [`Canonical Engineering Refine
 
 ## 9. Deferred Work Tab
 
-| Deferred ID | Description | Reason Deferred | Product Boundary | Revisit Trigger |
+| Deferred ID | Description | Reason Deferred | Related Product Boundary | Revisit Trigger |
 |---|---|---|---|---|
 | DEF-001 | Autonomous technician assignment | Human accountability is required and decision evidence is not reliably current. | Explicitly out of scope | New Product Discovery after governed recommendations demonstrate safe, measurable value. |
 | DEF-002 | Technician-location routing | Location data is optional and unreliable in the fictional scenario. | Explicitly out of scope | Separate consent, privacy, quality, and Product review. |

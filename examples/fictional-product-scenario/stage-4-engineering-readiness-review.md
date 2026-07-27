@@ -125,10 +125,10 @@ Help dispatchers make faster, better-supported assignment decisions by collectin
 
 | Workstream | Business Goal | Included Capabilities | Refinement Status | Key Gate |
 |---|---|---|---|---|
-| Eligibility, data, and workflow discovery | Prove the recommendation boundary is safe and useful. | Category rules, evidence freshness, dispatcher needs, audit and baselines. | Ready for Discovery | Human approval of evidence and eligibility model |
+| Eligibility, data, and workflow discovery | Prove the recommendation boundary is safe and useful. | Category rules, evidence freshness, dispatcher needs, audit and baselines. | In Progress | Human approval of evidence and eligibility model |
 | Guided request intake | Reduce preventable clarification. | Category-specific fields, completeness, safe data reuse. | Ready for Review | Field ownership and urgent exception behavior |
-| Governed recommendation workspace | Consolidate evidence without transferring accountability. | Eligible candidates, rationale, freshness, dispatcher approval, supervisor gate, overrides. | Gated by Discovery | Current data, explainability, roles, scheduling semantics |
-| Exceptions and status | Keep work visible and communication accurate. | Named queue, reasons, recovery, audit history, customer-safe status. | Ready for Review; integration discovery required | Queue ownership and information-boundary approval |
+| Governed recommendation workspace | Consolidate evidence without transferring accountability. | Eligible candidates, rationale, freshness, dispatcher approval, supervisor gate, overrides. | Blocked | Current data, explainability, roles, scheduling semantics |
+| Exceptions and status | Keep work visible and communication accurate. | Named queue, reasons, recovery, audit history, customer-safe status. | Ready for Review | Queue ownership and information-boundary approval |
 
 ### Engineering Discovery Required
 
