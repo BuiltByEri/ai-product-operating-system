@@ -6,6 +6,6 @@ Do not submit client-owned content, real stakeholder names, internal project nam
 
 Before proposing release changes, run the validation scripts and manually review all files for source neutrality.
 
-Framework changes that alter lifecycle stages, gates, VUED + Risk, artifact ownership, or Product Owner accountability require version governance and must not be merged as wording-only updates.
+Framework changes that alter lifecycle stages, gates, VUED Risk, artifact ownership, or Product Owner accountability require version governance and must not be merged as wording-only updates.
 
 Unless another written agreement applies, contributions submitted to this repository are submitted under the repository's Apache-2.0 license. This does not require contributors to transfer copyright.

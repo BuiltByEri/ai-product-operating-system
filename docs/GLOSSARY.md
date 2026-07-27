@@ -40,6 +40,6 @@ A review or approval boundary that must be completed by the accountable human ow
 
 The approved product direction and outcome that Engineering planning must preserve.
 
-## VUED + Risk
+## VUED Risk
 
 The AAPOS prioritization lens: Value, Urgency, Effort, Dependencies, and Risk.

@@ -43,7 +43,7 @@ Use this skill after Product Recommendation approval and before Executive Commun
 
 ## 3. Inputs
 
-Inputs include the Approved Product Recommendation, approval record, Product Intent, MVP scope, out-of-scope boundaries, assumptions, success measures, known constraints, prioritization rationale, and VUED + Risk analysis.
+Inputs include the Approved Product Recommendation, approval record, Product Intent, MVP scope, out-of-scope boundaries, assumptions, success measures, known constraints, prioritization rationale, and VUED Risk analysis.
 
 ## 4. Required Reading
 

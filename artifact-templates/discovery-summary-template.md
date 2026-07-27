@@ -25,7 +25,7 @@ Describe what appears to be happening, who is affected, and why it matters.
 
 - TBD
 
-## Initial VUED + Risk Signals
+## Initial VUED Risk Signals
 
 | Lens | Initial Signal | Notes |
 |---|---|---|

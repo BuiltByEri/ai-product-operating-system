@@ -11,7 +11,7 @@ aapos_skill:
   lifecycle_stage: { stage_id: "product-recommendation", stage_name: "Product Recommendation", order: 2 }
   primary_owner: "Product Owner"
   review_partners: ["Stakeholders"]
-  description: "Apply VUED + Risk to discovery inputs and produce a Product-owned recommendation for human approval."
+  description: "Apply VUED Risk to discovery inputs and produce a Product-owned recommendation for human approval."
   depends_on_skills: ["vued-clarifying-questions"]
   consumes:
     - { artifact_id: "artifact.discovery_summary", required: true }
@@ -35,7 +35,7 @@ aapos_skill:
 
 ## 1. Purpose
 
-Support Product Recommendation by applying VUED + Risk to discovery inputs and producing a Product-owned recommendation that is ready for human approval.
+Support Product Recommendation by applying VUED Risk to discovery inputs and producing a Product-owned recommendation that is ready for human approval.
 
 ## 2. When to Use
 
@@ -53,7 +53,7 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/VUED_RISK_FRAMEWOR
 
 1. Restate the use case and Product problem.
 2. Capture stakeholder answers and unresolved assumptions.
-3. Apply VUED + Risk with rationale.
+3. Apply VUED Risk with rationale.
 4. Separate immediate mitigation, Engineering discovery, MVP, and full solution.
 5. Recommend Product Intent and delivery sequence.
 6. Define in-scope and out-of-scope boundaries.
@@ -70,7 +70,7 @@ The Product Owner approves Product Intent, priority, MVP scope, out-of-scope bou
 Produce `artifact.product_recommendation` and update `artifact.approval_record` with:
 
 - Product Intent
-- VUED + Risk analysis
+- VUED Risk analysis
 - MVP recommendation
 - tradeoffs
 - success measures
