@@ -56,7 +56,7 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/ARTIFACT_MODEL.md`
 1. Identify the audience and decision needed.
 2. Translate Product Intent into plain business language.
 3. Summarize Engineering readiness without exposing internal planning identifiers.
-4. Explain VUED + Risk, dependencies, tradeoffs, deferred work, and open questions.
+4. Explain VUED Risk, dependencies, tradeoffs, deferred work, and open questions.
 5. State confidence honestly.
 6. Provide stakeholder communication guidance.
 7. Create the final decision artifact.
@@ -72,7 +72,7 @@ Produce `artifact.engineering_readiness_review` and update `artifact.approval_re
 
 - executive summary
 - problem and Product Intent
-- VUED + Risk summary
+- VUED Risk summary
 - Engineering readiness summary
 - dependencies and open questions
 - risks and tradeoffs

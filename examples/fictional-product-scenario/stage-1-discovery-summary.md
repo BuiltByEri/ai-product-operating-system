@@ -1,70 +1,99 @@
-# Stage 1: Discovery Summary
+# Stage 1: Decision-Changing Discovery Questions
 
-This artifact is fictional and demonstrates AAPOS Product Discovery.
+This artifact is fictional and demonstrates AAPOS Product Discovery. It does not recommend a solution.
 
-## Scenario Summary
+## Discovery Objective
 
-Northstar has a vendor onboarding flow with rising abandonment, inconsistent compliance review, manual Operations follow-up, and pressure from Sales to shorten activation time.
+Determine what must be learned before the Product Owner decides whether the first investment should improve intake, support dispatcher decisions, automate assignments, improve status visibility, or stop.
 
-## Problem Breakdown
+## Initial Problem Framing
 
-The problem is not only onboarding speed. It includes incomplete vendor submissions, unclear review routing, manual operational recovery, and tension between fast activation and risk control.
+The request is framed as an AI auto-dispatch project. The available evidence suggests at least three different problems may be collapsed into that request:
 
-## Known Facts
+- requests reach dispatch without enough information;
+- dispatchers make decisions using fragmented or stale data; and
+- customers and account teams cannot see why work is waiting.
 
-- Vendors submit onboarding information through fragmented intake steps.
-- Operations manually follows up when vendor data is missing.
-- Compliance review is not consistently triggered by the same signals.
-- Sales wants shorter activation time.
-- Engineering estimates and architecture are not available.
-
-## Assumptions
-
-- Abandonment may be caused by unclear steps, repeated data entry, missing status visibility, or slow review.
-- Manual Operations work may be driven by avoidable data-quality issues.
-- Some compliance checks can be routed more consistently without removing human review.
-- Faster onboarding may increase risk if high-risk cases are not identified early.
-
-## Initial VUED + Risk Signals
-
-| Lens | Initial Signal | Notes |
-|---|---|---|
-| Value | High | The problem affects vendor activation, Operations capacity, Sales expectations, and risk control. |
-| Urgency | Near-Term | Stakeholder pressure is rising, but no hard launch date is supplied. |
-| Effort | Unknown | Engineering discovery is required. |
-| Dependencies | High | Product, Engineering, Operations, Risk, Sales, and data flows are involved. |
-| Risk | High | Faster activation without controlled review could increase compliance or operational exposure. |
+Choosing a solution before separating those problems could automate the wrong bottleneck.
 
 ## Decision-Changing Clarifying Questions
 
-| Question | Why It Matters | Decision Influenced |
-|---|---|---|
-| Where do vendors abandon onboarding most often? | Identifies whether the MVP should focus on intake clarity, data reuse, status visibility, or review routing. | MVP scope |
-| Which vendor attributes require human compliance review? | Determines whether the flow can route low-risk cases differently while preserving human oversight for higher-risk cases. | Risk response and controls |
-| What manual Operations tasks are most repetitive? | Helps separate workflow automation from full process redesign. | Delivery sequence |
-| Which Sales commitments are time-sensitive? | Clarifies urgency without letting stakeholder pressure override risk. | Priority and sequencing |
-| What systems own vendor profile, document, and review data? | Exposes integration and data dependencies. | Engineering discovery |
+### 1. Where does the avoidable delay actually occur: before a request is complete, while a dispatcher evaluates it, or after an assignment is made?
 
-## Top Three Questions
+**Why it matters:** “Dispatch is slow” is not a precise problem. If incomplete intake causes most delay, automatic assignment will not solve the primary bottleneck.
 
-1. Where do vendors abandon onboarding most often?
-2. Which vendor attributes require human compliance review?
-3. What systems own vendor profile, document, and review data?
+**Decision influenced:** Whether the MVP begins with guided intake, dispatcher decision support, or assignment automation.
 
-## Information Gaps
+### 2. Which request categories can be recommended safely, and which must always require dispatch-supervisor approval?
 
-- Actual abandonment points are unknown.
-- Compliance routing criteria are not fully documented.
-- System ownership and data contracts need Engineering discovery.
-- No delivery estimate is available.
+**Why it matters:** The fictional policy requires human approval for safety-sensitive and after-hours work. Treating all requests the same would either weaken controls or make the workflow unnecessarily restrictive.
 
-## Human Review Metadata
+**Decision influenced:** MVP eligibility rules, human review gates, and whether autonomous dispatch belongs in scope at all.
+
+### 3. Are technician availability, certification, and location data current and reliable enough to support an assignment recommendation?
+
+**Why it matters:** A fast recommendation based on stale certification or unreliable location data may be worse than a slower human decision.
+
+**Decision influenced:** Engineering discovery, confidence level, data dependencies, and whether recommendations may be presented as decision-ready.
+
+### 4. What must happen when a recommendation is incomplete, conflicting, rejected, or unavailable?
+
+**Why it matters:** Operations needs a safe fallback. Without explicit exception handling, work could disappear from view or appear assigned when no accountable person accepted it.
+
+**Decision influenced:** Exception-queue scope, status model, audit requirements, and rollout controls.
+
+### 5. Is the four-week pressure tied to a contractual customer outcome, or to an internal peak-planning decision?
+
+**Why it matters:** A decision deadline should not be converted into a delivery promise. The distinction changes the appropriate commitment.
+
+**Decision influenced:** Urgency rating, stakeholder communication, and whether the next commitment is discovery, refinement, or implementation.
+
+## If Only Three Questions Can Be Asked
+
+Ask questions 1, 2, and 3 first.
+
+Together they establish the actual bottleneck, the non-negotiable human-control boundary, and whether the required data can support the proposed decision. Failure handling and deadline interpretation remain important, but they should not be used to refine an automation concept that has not yet passed the first three gates.
+
+## Fictional Stakeholder Answers
+
+| Question | Answer Received | Evidence Strength | What Changed |
+|---|---|---|---|
+| Where does delay occur? | The reviewed sample shows clarification before assignment is common. Missing access windows and equipment identifiers appear most often. Dispatcher decision time is not measured. | Medium | Intake completeness becomes a first-order Product problem. Auto-dispatch is no longer the assumed MVP. |
+| Which work needs human approval? | Safety-sensitive and after-hours requests require supervisor approval. Standard daytime requests may be eligible for recommendation support if required inputs are complete. | High | Human approval is a mandatory control. Autonomous dispatch is excluded from the first release. |
+| Is the data reliable enough? | Shift availability is current, certification data is nightly, and technician location is optional. | High | Recommendations cannot claim real-time eligibility. Data freshness must be visible and certification validation is an Engineering gate. |
+| What is the fallback? | Operations requires every unresolved request to return to a named queue with a visible reason and owner. | High | Exception handling and auditability become MVP capabilities, not operational afterthoughts. |
+| What drives the deadline? | The four-week date supports internal peak planning. No customer contract requires production delivery by that date. | High | Urgency remains near-term, but the recommended commitment can be a direction and bounded discovery rather than delivery. |
+
+## Known Facts After Clarification
+
+- Incomplete request information is a demonstrated source of delay in the fictional sample.
+- Safety-sensitive and after-hours assignments require human approval.
+- The scheduling application remains the assignment system of record.
+- Certification data is not current enough to be treated as real-time.
+- Every unresolved request requires a visible manual fallback.
+- The four-week date is a decision deadline, not a production launch date.
+
+## Remaining Assumptions and Blind Spots
+
+- The sample does not prove which intervention will produce the greatest operational improvement.
+- Dispatcher decision time and incorrect-assignment frequency have no validated baseline.
+- The feasibility of improving certification freshness is unknown.
+- Recommendation explanation requirements have not been tested with dispatchers.
+- Customer status needs are represented by internal stakeholders, not direct research.
+
+## Discovery Gate
+
+**Human decision:** Continue to Product Recommendation with constraints.
+
+**Approved direction for the next stage:** Compare intake completeness, governed dispatcher recommendations, status visibility, and autonomous assignment using VUED Risk. Do not assume AI assignment is the preferred solution.
+
+**Held at this gate:** Delivery dates, budget, autonomous dispatch, production metrics, and technical design.
 
 ```text
 Drafted with AI assistance: Yes
-Human reviewed: Yes
-Reviewed by: Fictional Product Owner
-Review date: 2026-07-27
-Open assumptions: Abandonment cause, review routing rules, data ownership
-Open risks: Risk-control drift if speed is prioritized without gating
+Human decision owner: Fictional Product Owner
+Gate decision: Continue With Constraints
+Human review status: Demonstrated for fictional example
+Open assumptions: Baselines, certification freshness, dispatcher explanation needs
+Open risks: Automating the wrong bottleneck; stale data influencing assignments
 ```

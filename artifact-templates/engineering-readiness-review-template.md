@@ -39,7 +39,7 @@ State that the work followed AI-assisted Product Ownership with human review and
 - Out of scope:
 - Critical assumptions:
 
-## VUED + Risk Summary
+## VUED Risk Summary
 
 | Lens | Rating | Executive Rationale |
 |---|---|---|

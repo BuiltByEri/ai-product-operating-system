@@ -16,7 +16,7 @@ The Product Owner reviews the discovery output, removes low-value questions, and
 
 ## 4. Create the Product Recommendation
 
-Use [`skills/claude/vued-product-plan.md`](../skills/claude/vued-product-plan.md) to apply VUED + Risk, recommend a sequence, distinguish MVP from full solution, and record tradeoffs.
+Use [`skills/claude/vued-product-plan.md`](../skills/claude/vued-product-plan.md) to apply VUED Risk, recommend a sequence, distinguish MVP from full solution, and record tradeoffs.
 
 ## 5. Complete Product Approval
 

@@ -39,7 +39,7 @@ Input:
 Output:
 
 - Product Intent
-- VUED + Risk analysis
+- VUED Risk analysis
 - MVP recommendation
 - tradeoffs
 - success measures

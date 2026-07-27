@@ -17,7 +17,7 @@ Summarize the business problem, affected users or teams, and why the work matter
 
 State the approved Product direction in one clear paragraph.
 
-## VUED + Risk Analysis
+## VUED Risk Analysis
 
 | Lens | Rating | Rationale |
 |---|---|---|

@@ -39,9 +39,9 @@ No additional stages are part of AAPOS v1.0.0.
 | `gate.engineering-planning.engineering-review` | Engineering Planning | Engineering validates feasibility, dependencies, sequencing, and technical risk while Product confirms scope integrity. |
 | `gate.executive-communication.final-approval` | Executive Communication | Product Owner approves the final recommendation, confidence statement, and decision request. |
 
-## VUED + Risk
+## VUED Risk
 
-Product Discovery and Product Recommendation use VUED + Risk:
+Product Discovery and Product Recommendation use VUED Risk:
 
 - Value
 - Urgency
@@ -81,7 +81,7 @@ Downstream artifacts may consume upstream artifacts, but they must not silently 
 | Stage | Exit Criteria |
 |---|---|
 | Product Discovery | Assumptions, risks, gaps, and decision-changing questions are visible and reviewed. |
-| Product Recommendation | Product Intent, VUED + Risk, MVP, out-of-scope boundaries, tradeoffs, and success measures are approved. |
+| Product Recommendation | Product Intent, VUED Risk, MVP, out-of-scope boundaries, tradeoffs, and success measures are approved. |
 | Engineering Planning | Epics, stories, dependencies, discovery, risks, deferred work, and readiness are traceable to approved Product intent. |
 | Executive Communication | The final decision artifact is written for its audience, honest about uncertainty, and approved by the Product Owner. |
 
@@ -140,4 +140,4 @@ AAPOS uses semantic versioning.
 
 ## Framework Freeze Rules
 
-AAPOS v1.0.0 freezes the four-stage lifecycle, human gate model, VUED + Risk decision lens, artifact ownership boundaries, and Product Owner accountability. Release packaging may improve documentation and validation, but it may not redesign the operating model.
+AAPOS v1.0.0 freezes the four-stage lifecycle, human gate model, VUED Risk decision lens, artifact ownership boundaries, and Product Owner accountability. Release packaging may improve documentation and validation, but it may not redesign the operating model.

@@ -5,7 +5,7 @@
 - AAPOS Core specification
 - Four-stage lifecycle
 - Human governance and approval gates
-- VUED + Risk decision framework
+- VUED Risk decision framework
 - Artifact model and templates
 - Reference skill contracts
 - Fictional Northstar Vendor Onboarding Platform example

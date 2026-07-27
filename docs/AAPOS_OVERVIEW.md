@@ -2,7 +2,7 @@
 
 AAPOS is the AI-Assisted Product Operating System.
 
-It is a Product Ownership framework for turning ambiguous product work into governed, engineering-ready decisions. It combines AI-assisted drafting and analysis with explicit human gates, Product Owner accountability, VUED + Risk prioritization, and audience-specific artifacts.
+It is a Product Ownership framework for turning ambiguous product work into governed, engineering-ready decisions. It combines AI-assisted drafting and analysis with explicit human gates, Product Owner accountability, VUED Risk prioritization, and audience-specific artifacts.
 
 ## Positioning
 

@@ -62,13 +62,13 @@ Business Problem
 | Stage | Purpose | Reference implementation | Primary artifact |
 |---|---|---|---|
 | 1. Product Discovery | Turn ambiguity into a structured understanding of the problem | `skills/claude/vued-clarifying-questions.md` | Discovery Summary |
-| 2. Product Recommendation | Apply VUED + Risk and produce an approved Product plan | `skills/claude/vued-product-plan.md` | Approved Product Recommendation |
+| 2. Product Recommendation | Apply VUED Risk and produce an approved Product plan | `skills/claude/vued-product-plan.md` | Approved Product Recommendation |
 | 3. Engineering Planning | Translate locked Product strategy into engineering-ready planning | `skills/codex/engineering-refinement-planner.md` | Engineering Refinement Package and Workbook Map |
 | 4. Executive Communication | Translate Product and Engineering work into a business-audience decision artifact | `skills/claude/engineering-readiness-review.md` | Engineering Readiness Review |
 
 See [`docs/OPERATING_MODEL.md`](docs/OPERATING_MODEL.md).
 
-## VUED + Risk
+## VUED Risk
 
 AAPOS evaluates product work through five lenses:
 
@@ -93,7 +93,7 @@ See [`docs/HUMAN_GOVERNANCE.md`](docs/HUMAN_GOVERNANCE.md) and [`core/AAPOS_GOVE
 ## Core Concepts
 
 - Product Intent: the approved product direction that Engineering planning must preserve.
-- VUED + Risk: the product decision lens used to reason about priority and sequence.
+- VUED Risk: the product decision lens used to reason about priority and sequence.
 - Human Gate: the review or approval boundary between lifecycle stages.
 - Discovery Summary: the artifact that records what is known, assumed, risky, or missing.
 - Approved Product Recommendation: the Product-owned decision artifact that locks scope before Engineering planning.

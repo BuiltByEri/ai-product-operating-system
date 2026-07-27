@@ -51,7 +51,7 @@ Read [`core/AAPOS_CORE.md`](../../core/AAPOS_CORE.md), [`docs/VUED_RISK_FRAMEWOR
 
 1. Restate the product problem in plain language.
 2. Identify known facts, assumptions, unknowns, and risk signals.
-3. Apply early VUED + Risk thinking without making a final priority recommendation.
+3. Apply early VUED Risk thinking without making a final priority recommendation.
 4. Generate no more than five clarifying questions.
 5. For each question, explain why it matters and what decision it could change.
 6. Identify the top three questions if time or stakeholder access is limited.
@@ -70,7 +70,7 @@ Produce `artifact.discovery_summary` with:
 - known facts
 - assumptions
 - decision-changing questions
-- initial VUED + Risk signals
+- initial VUED Risk signals
 - information gaps
 - human review metadata
 

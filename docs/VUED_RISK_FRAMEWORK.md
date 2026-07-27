@@ -1,6 +1,6 @@
-# VUED + Risk Framework
+# VUED Risk Framework
 
-VUED + Risk is the decision framework used in Product Discovery and Product Recommendation.
+VUED Risk is the decision framework used in Product Discovery and Product Recommendation.
 
 It separates five dimensions that are often collapsed into one priority score.
 
@@ -105,4 +105,4 @@ Always explain:
 
 ## Expected Result
 
-VUED + Risk should produce a recommendation that is understandable, defensible, explicit about uncertainty, and realistic about both Product value and delivery constraints.
+VUED Risk should produce a recommendation that is understandable, defensible, explicit about uncertainty, and realistic about both Product value and delivery constraints.
